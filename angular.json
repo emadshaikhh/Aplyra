@@ -19,21 +19,23 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:application",
-          "options": {
-            "browser": "src/main.ts",
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.scss"
-            ]
-          },
+  "builder": "@angular/build:application",
+  "options": {
+    "outputPath": "dist/aplixo",
+    "browser": "src/main.ts",
+    "tsConfig": "tsconfig.app.json",
+    "inlineStyleLanguage": "scss",
+    "assets": [
+      {
+        "glob": "**/*",
+        "input": "public"
+      }
+    ],
+    "styles": [
+      "src/styles.scss"
+    ]
+  },
+
           "configurations": {
             "production": {
               "budgets": [
