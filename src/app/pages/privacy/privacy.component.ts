@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [CommonModule],
-  templateUrl: './privacy.html',
-  styleUrls: ['./privacy.scss']
+  templateUrl: './privacy.component.html',
+  styleUrl: './privacy.component.scss',
+  imports: [CommonModule]
 })
 export class PrivacyComponent {
-  lastUpdated = 'January 27, 2026';
+  lastUpdated = 'January 2026';
 }
