@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sch-001",
+    "name": "National Merit Scholarship",
+    "provider": "Ministry of Education",
+    "category": "scholarship",
+    "deadline": "2026-03-15",
+    "amount": "₹50,000",
+    "course": "Undergraduate",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Merit-based scholarship for undergraduate students across India.",
+    "eligibility": [
+      "Indian citizen",
+      "Minimum 75% in Class 12",
+      "Family income below ₹8 lakhs per annum"
+    ],
+    "documents": [
+      "Class 12 marksheet",
+      "Income certificate",
+      "Aadhaar card",
+      "Bank account details"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-002",
+    "name": "Post Matric Scholarship for SC/ST",
+    "provider": "Department of Social Justice",
+    "category": "scholarship",
+    "deadline": "2026-04-30",
+    "amount": "₹1,20,000",
+    "course": "Postgraduate",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "Financial assistance for SC/ST students pursuing postgraduate studies.",
+    "eligibility": [
+      "Belongs to SC/ST category",
+      "Enrolled in postgraduate course",
+      "Family income below ₹2.5 lakhs"
+    ],
+    "documents": [
+      "Caste certificate",
+      "Income certificate",
+      "College admission proof",
+      "Previous year marksheet"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-003",
+    "name": "Prime Minister's Special Scholarship Scheme",
+    "provider": "Ministry of Home Affairs",
+    "category": "scholarship",
+    "deadline": "2026-05-20",
+    "amount": "₹30,000",
+    "course": "Undergraduate",
+    "state": "Jammu and Kashmir",
+    "incomeLimit": "₹6,00,000",
+    "description": "Scholarship for students from J&K pursuing undergraduate studies outside the state.",
+    "eligibility": [
+      "Domicile of Jammu and Kashmir",
+      "Studying outside J&K",
+      "Minimum 60% in Class 12"
+    ],
+    "documents": [
+      "Domicile certificate",
+      "Class 12 marksheet",
+      "College admission letter",
+      "Bank passbook"
+    ],
+    "officialLink": "https://aicte-india.org"
+  },
+  {
+    "id": "int-001",
+    "name": "Government of India Internship Programme",
+    "provider": "Ministry of Personnel",
+    "category": "internship",
+    "deadline": "2026-02-28",
+    "amount": "₹10,000/month",
+    "course": "Undergraduate",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Paid internship program in various government ministries and departments.",
+    "eligibility": [
+      "Currently enrolled student",
+      "Minimum 60% aggregate",
+      "Good communication skills"
+    ],
+    "documents": [
+      "College ID card",
+      "Current semester marksheet",
+      "Resume",
+      "Recommendation letter"
+    ],
+    "officialLink": "https://internship.gov.in"
+  },
+  {
+    "id": "sch-004",
+    "name": "Central Sector Scheme of Scholarship",
+    "provider": "Ministry of Education",
+    "category": "scholarship",
+    "deadline": "2026-06-15",
+    "amount": "₹20,000",
+    "course": "Undergraduate",
+    "state": "All India",
+    "incomeLimit": "₹4,50,000",
+    "description": "Merit-cum-means scholarship for students from economically weaker sections.",
+    "eligibility": [
+      "Family income below ₹4.5 lakhs",
+      "Secured admission through central allocation",
+      "Minimum 80% in Class 12"
+    ],
+    "documents": [
+      "Income certificate",
+      "Class 12 marksheet",
+      "College admission proof",
+      "Aadhaar card"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-005",
+    "name": "Minority Scholarship Scheme",
+    "provider": "Ministry of Minority Affairs",
+    "category": "scholarship",
+    "deadline": "2026-07-10",
+    "amount": "₹25,000",
+    "course": "Postgraduate",
+    "state": "All India",
+    "incomeLimit": "₹2,00,000",
+    "description": "Scholarship for students from minority communities pursuing higher education.",
+    "eligibility": [
+      "Belongs to notified minority community",
+      "Family income below ₹2 lakhs",
+      "Minimum 50% in graduation"
+    ],
+    "documents": [
+      "Community certificate",
+      "Income certificate",
+      "Graduation certificate",
+      "Aadhaar card"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  }
+]

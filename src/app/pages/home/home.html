@@ -1,0 +1,72 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Find the opportunities you qualify for</h1>
+        <p class="hero-subtitle">
+          Discover scholarships, internships, and government schemes tailored to your profile.
+          All verified from official sources.
+        </p>
+        
+        <div class="hero-search">
+          <app-search-bar 
+            placeholder="Search for scholarships, internships, or schemes..."
+            (search)="onSearch($event)">
+          </app-search-bar>
+        </div>
+
+        <button class="cta-button" (click)="navigateToCategory(categories[0])">
+          Search Scholarships
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose Aplixo?</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <p class="feature-description">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Browse by Category</h2>
+      
+      <div class="categories-grid">
+        <div 
+          class="category-card" 
+          *ngFor="let category of categories"
+          (click)="navigateToCategory(category)">
+          <div class="category-icon">{{ category.icon }}</div>
+          <h3 class="category-title">{{ category.name }}</h3>
+          <p class="category-description">{{ category.description }}</p>
+          <span class="category-link">Explore →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to find your opportunity?</h2>
+        <p>Start exploring scholarships and opportunities that match your goals.</p>
+        <button class="cta-button-secondary" (click)="navigateToCategory(categories[0])">
+          Get Started
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

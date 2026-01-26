@@ -1,0 +1,22 @@
+<div class="scholarships-list">
+  <div class="container">
+    <h2>Explore Opportunities</h2>
+
+    <app-search-bar
+      [placeholder]="'Search opportunities...'"
+      (search)="onSearch($event)">
+    </app-search-bar>
+
+    <div class="scholarships-container"
+         [class.grid-view]="viewMode === 'grid'"
+         [class.list-view]="viewMode === 'list'">
+
+      <app-scholarship-card
+        *ngFor="let scholarship of filteredScholarships"
+        [scholarship]="scholarship"
+        [viewMode]="viewMode">
+      </app-scholarship-card>
+
+    </div>
+  </div>
+</div>

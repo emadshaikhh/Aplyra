@@ -1,0 +1,100 @@
+<div class="about-page">
+  <div class="container">
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <h1>About Aplixo</h1>
+      <p class="hero-subtitle">
+        Empowering students to discover and access educational opportunities across India
+      </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+      <div class="mission-content">
+        <h2>Our Mission</h2>
+        <p>
+          Aplixo is dedicated to making educational opportunities accessible to every student in India. 
+          We believe that financial constraints should never be a barrier to quality education. Our platform 
+          aggregates scholarships, internships, and government schemes from verified sources, making it easier 
+          for students to discover opportunities they qualify for.
+        </p>
+        <p>
+          We don't accept applications directly or store sensitive personal information. Instead, we act as a 
+          trusted discovery platform that connects students with official opportunity providers, ensuring transparency 
+          and security throughout the process.
+        </p>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+      <h2 class="section-title">What We Do</h2>
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+      <h2 class="section-title">Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card" *ngFor="let value of values">
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+      <h2 class="section-title">How Aplixo Works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Search & Discover</h3>
+          <p>Use our smart filters to find scholarships, internships, and schemes that match your profile.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Review Details</h3>
+          <p>View complete information including eligibility criteria, required documents, and deadlines.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Apply Directly</h3>
+          <p>Click through to the official provider's website to complete your application securely.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Note -->
+    <section class="note-section">
+      <div class="note-box">
+        <div class="note-icon">ℹ️</div>
+        <div class="note-content">
+          <h3>Important to Know</h3>
+          <ul>
+            <li>Aplixo is a discovery platform, not an application portal</li>
+            <li>We do not accept applications or collect sensitive personal data</li>
+            <li>All applications are completed on official provider websites</li>
+            <li>We verify all opportunities from trusted government and institutional sources</li>
+            <li>Our service is completely free for students</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to Find Your Opportunity?</h2>
+      <p>Start exploring scholarships and opportunities that match your goals today.</p>
+      <a routerLink="/scholarships" class="cta-button">Browse Opportunities</a>
+    </section>
+
+  </div>
+</div>

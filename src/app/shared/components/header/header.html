@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <a routerLink="/" class="logo">
+        <span class="logo-text">Aplixo</span>
+      </a>
+
+      <button class="mobile-menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" [class.active]="isMenuOpen">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a routerLink="/scholarships" routerLinkActive="active">Scholarships</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </nav>
+    </div>
+  </div>
+</header>

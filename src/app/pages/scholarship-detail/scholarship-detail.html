@@ -1,0 +1,146 @@
+<div class="scholarship-detail">
+  <div class="container">
+
+    <!-- Loading State -->
+    <div *ngIf="isLoading" class="loading">
+      <div class="spinner"></div>
+      <p>Loading details...</p>
+    </div>
+
+    <!-- Not Found State -->
+    <div *ngIf="notFound && !isLoading" class="not-found">
+      <div class="not-found-icon">😕</div>
+      <h2>Opportunity Not Found</h2>
+      <p>The opportunity you're looking for doesn't exist or has been removed.</p>
+      <button class="back-btn" (click)="goBack()">
+        ← Back to Scholarships
+      </button>
+    </div>
+
+    <!-- Scholarship Detail -->
+    <div *ngIf="scholarship && !isLoading" class="detail-content">
+      
+      <!-- Back Button -->
+      <button class="back-link" (click)="goBack()">
+        ← Back to All Opportunities
+      </button>
+
+      <!-- Header Section -->
+      <div class="detail-header">
+        <div class="header-main">
+          <span 
+            class="category-badge" 
+            [style.background-color]="getCategoryColor(scholarship.category)">
+            {{ getCategoryLabel(scholarship.category) }}
+          </span>
+          
+          <h1 class="scholarship-title">{{ scholarship.name }}</h1>
+          <p class="provider">
+            <span class="provider-icon">🏛️</span>
+            {{ scholarship.provider }}
+          </p>
+        </div>
+
+        <div class="header-sidebar">
+          <div class="info-card amount-card">
+            <div class="info-label">Amount</div>
+            <div class="info-value">{{ scholarship.amount }}</div>
+          </div>
+          
+          <div class="info-card deadline-card" [class.deadline-passed]="isDeadlinePassed()">
+            <div class="info-label">Deadline</div>
+            <div class="info-value">{{ formatDeadline(scholarship.deadline) }}</div>
+            <div *ngIf="!isDeadlinePassed() && getDaysUntilDeadline() <= 30" class="deadline-warning">
+              ⚠️ {{ getDaysUntilDeadline() }} days left
+            </div>
+            <div *ngIf="isDeadlinePassed()" class="deadline-passed-text">
+              Deadline has passed
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Info Grid -->
+      <div class="quick-info">
+        <div class="quick-info-item">
+          <span class="info-icon">🎓</span>
+          <div class="info-content">
+            <div class="info-title">Course Level</div>
+            <div class="info-text">{{ scholarship.course }}</div>
+          </div>
+        </div>
+        
+        <div class="quick-info-item">
+          <span class="info-icon">📍</span>
+          <div class="info-content">
+            <div class="info-title">State</div>
+            <div class="info-text">{{ scholarship.state }}</div>
+          </div>
+        </div>
+        
+        <div class="quick-info-item">
+          <span class="info-icon">💵</span>
+          <div class="info-content">
+            <div class="info-title">Income Limit</div>
+            <div class="info-text">{{ scholarship.incomeLimit }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description Section -->
+      <section class="detail-section">
+        <h2 class="section-title">About This Opportunity</h2>
+        <p class="description-text">{{ scholarship.description }}</p>
+      </section>
+
+      <!-- Eligibility Section -->
+      <section class="detail-section">
+        <h2 class="section-title">Eligibility Criteria</h2>
+        <ul class="criteria-list">
+          <li *ngFor="let criterion of scholarship.eligibility">
+            <span class="check-icon">✓</span>
+            {{ criterion }}
+          </li>
+        </ul>
+      </section>
+
+      <!-- Documents Section -->
+      <section class="detail-section">
+        <h2 class="section-title">Required Documents</h2>
+        <div class="documents-grid">
+          <div class="document-item" *ngFor="let document of scholarship.documents">
+            <span class="document-icon">📄</span>
+            <span class="document-name">{{ document }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Important Notice -->
+      <div class="notice-box">
+        <div class="notice-icon">ℹ️</div>
+        <div class="notice-content">
+          <h3>Important Information</h3>
+          <p>
+            Aplixo is a discovery platform. We do not accept applications directly. 
+            You will be redirected to the official provider's website to complete your application. 
+            Please verify all information on the official site before applying.
+          </p>
+        </div>
+      </div>
+
+      <!-- Apply Button -->
+      <div class="apply-section">
+        <button 
+          class="apply-btn" 
+          (click)="applyNow()"
+          [disabled]="isDeadlinePassed()">
+          <span *ngIf="!isDeadlinePassed()">Apply on Official Website →</span>
+          <span *ngIf="isDeadlinePassed()">Deadline Passed</span>
+        </button>
+        <p class="apply-note">You will be redirected to {{ scholarship.provider }}'s official website</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>

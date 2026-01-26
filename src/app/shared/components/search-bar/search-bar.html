@@ -1,0 +1,17 @@
+<div class="search-bar">
+  <input
+    type="text"
+    class="search-input"
+    [(ngModel)]="searchTerm"
+    [placeholder]="placeholder"
+    (keypress.enter)="submit()"
+  />
+
+  <button
+    class="search-button"
+    (click)="submit()"
+    [disabled]="!searchTerm.trim()">
+    <span class="search-icon">🔍</span>
+    Search
+  </button>
+</div>
