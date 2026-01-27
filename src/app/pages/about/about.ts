@@ -39,7 +39,7 @@ export class AboutComponent {
     {
       icon: '📱',
       title: 'Mobile Friendly',
-      description: 'Access Aplixo on any device - desktop, tablet, or mobile for searching on the go.'
+      description: 'Access Aplyra on any device - desktop, tablet, or mobile for searching on the go.'
     }
   ];
 

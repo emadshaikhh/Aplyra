@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/aplixo"
+  publish = "dist/aplyra"
   command = "ng build --configuration production"
 
 [[redirects]]

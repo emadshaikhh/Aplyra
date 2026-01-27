@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "aplixo": {
+    "aplyra": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -21,7 +21,7 @@
         "build": {
   "builder": "@angular/build:application",
   "options": {
-    "outputPath": "dist/aplixo",
+    "outputPath": "dist/aplyra",
     "browser": "src/main.ts",
     "tsConfig": "tsconfig.app.json",
     "inlineStyleLanguage": "scss",
@@ -64,10 +64,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "aplixo:build:production"
+              "buildTarget": "aplyra:build:production"
             },
             "development": {
-              "buildTarget": "aplixo:build:development"
+              "buildTarget": "aplyra:build:development"
             }
           },
           "defaultConfiguration": "development"

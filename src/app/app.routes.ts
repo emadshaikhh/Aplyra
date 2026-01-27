@@ -3,33 +3,33 @@ import { HomeComponent } from './pages/home/home';
 import { ListComponent } from './pages/scholarships-list/scholarships-list';
 import { ScholarshipDetailComponent } from './pages/scholarship-detail/scholarship-detail';
 import { AboutComponent } from './pages/about/about';
-import { PrivacyComponent } from './pages/privacy/privacy';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Aplixo - Find Scholarships, Internships & Government Schemes'
+    title: 'Aplyra - Find Scholarships, Internships & Government Schemes'
   },
   {
     path: 'scholarships',
     component: ListComponent,
-    title: 'Scholarships - Aplixo'
+    title: 'Scholarships - Aplyra'
   },
   {
     path: 'scholarships/:id',
     component: ScholarshipDetailComponent,
-    title: 'Scholarship Details - Aplixo'
+    title: 'Scholarship Details - Aplyra  '
   },
   {
     path: 'about',
     component: AboutComponent,
-    title: 'About Us - Aplixo'
+    title: 'About Us - Aplyra'
   },
   {
     path: 'privacy',
     component: PrivacyComponent,
-    title: 'Privacy Policy - Aplixo'
+    title: 'Privacy Policy - Aplyra '
   },
   {
     path: '**',

@@ -22,7 +22,7 @@ import { FooterComponent } from './shared/components/footer/footer';
   `]
 })
 export class AppComponent implements OnInit {
-  title = 'Aplixo';
+  title = 'Aplyra';
 
   constructor(private router: Router) {}
 
