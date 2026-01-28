@@ -1,26 +1,42 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
+      
       <div class="footer-section">
-        <h3>Aplyra</h3>
-        <p>Discover scholarships, internships, and government schemes you qualify for.</p>
+        <h3>Aplyra<span class="dot">.</span></h3>
+        <p>Empowering students with verified scholarships, internships, and government schemes.</p>
       </div>
 
       <div class="footer-section">
         <h4>Quick Links</h4>
         <a routerLink="/">Home</a>
         <a routerLink="/scholarships">Scholarships</a>
-        <a routerLink="/about">About</a>
+        <a routerLink="/internships">Internships</a>
+        <a routerLink="/schemes">Govt Schemes</a>
       </div>
 
       <div class="footer-section">
-        <h4>Legal</h4>
+        <h4>Company</h4>
+        <a routerLink="/about">About Us</a>
         <a routerLink="/privacy">Privacy Policy</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Aplyra. All rights reserved.</p>
+      <div class="bottom-container">
+        
+        <div class="copyright">
+          &copy; {{ currentYear }} Aplyra. All rights reserved.
+        </div>
+        
+        <div class="credit">
+          Designed & Developed by 
+          <a href="https://www.linkedin.com/in/mohd-emad-915976393/" target="_blank" class="creator-link">
+            Mohd Emad
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 </footer>

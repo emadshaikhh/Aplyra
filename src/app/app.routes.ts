@@ -11,15 +11,35 @@ export const routes: Routes = [
     component: HomeComponent,
     title: 'Aplyra - Find Scholarships, Internships & Government Schemes'
   },
+  
+  // --- 1. SCHOLARSHIPS PAGE ---
   {
     path: 'scholarships',
     component: ListComponent,
-    title: 'Scholarships - Aplyra'
+    title: 'Scholarships - Aplyra',
+    data: { category: 'scholarship', title: 'Find Scholarships' } // <--- Added Data
   },
+  
+  // --- 2. INTERNSHIPS PAGE ---
   {
-    path: 'scholarships/:id',
+    path: 'internships',
+    component: ListComponent, // Reusing the component
+    title: 'Internships - Aplyra',
+    data: { category: 'internship', title: 'Find Internships' }
+  },
+
+  // --- 3. SCHEMES PAGE ---
+  {
+    path: 'schemes',
+    component: ListComponent, // Reusing the component
+    title: 'Government Schemes - Aplyra',
+    data: { category: 'scheme', title: 'Government Schemes' }
+  },
+
+  {
+    path: 'scholarship/:id', // Note: You might want to rename this to 'opportunity/:id' later for consistency
     component: ScholarshipDetailComponent,
-    title: 'Scholarship Details - Aplyra  '
+    title: 'Details - Aplyra'
   },
   {
     path: 'about',
@@ -29,7 +49,7 @@ export const routes: Routes = [
   {
     path: 'privacy',
     component: PrivacyComponent,
-    title: 'Privacy Policy - Aplyra '
+    title: 'Privacy Policy - Aplyra'
   },
   {
     path: '**',

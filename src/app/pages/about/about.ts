@@ -10,39 +10,11 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./about.scss']
 })
 export class AboutComponent {
-  features = [
-    {
-      icon: '🎯',
-      title: 'Comprehensive Database',
-      description: 'Access to thousands of verified scholarships, internships, and government schemes from across India.'
-    },
-    {
-      icon: '🔍',
-      title: 'Smart Search & Filters',
-      description: 'Find opportunities that match your profile with our intelligent filtering system.'
-    },
-    {
-      icon: '✓',
-      title: 'Verified Information',
-      description: 'All opportunities are verified from official sources including government portals and educational institutions.'
-    },
-    {
-      icon: '📅',
-      title: 'Deadline Tracking',
-      description: 'Never miss an opportunity with clear deadline information and timely reminders.'
-    },
-    {
-      icon: '🔒',
-      title: 'Privacy First',
-      description: 'We don\'t store your personal data. You apply directly on official provider websites.'
-    },
-    {
-      icon: '📱',
-      title: 'Mobile Friendly',
-      description: 'Access Aplyra on any device - desktop, tablet, or mobile for searching on the go.'
-    }
-  ];
+  
+  // NOTE: The 'features' array was removed because we now use 
+  // professional static SVGs directly in the about.html file.
 
+  // We keep 'values' because it is text-only and still uses *ngFor
   values = [
     {
       title: 'Transparency',

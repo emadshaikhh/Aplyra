@@ -1,22 +1,82 @@
-<div class="scholarships-list">
+<div class="page-wrapper">
   <div class="container">
-    <h2>Explore Opportunities</h2>
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h3>Filters</h3>
+        <button class="reset-btn" (click)="resetFilters()">Reset</button>
+      </div>
 
-    <app-search-bar
-      [placeholder]="'Search opportunities...'"
-      (search)="onSearch($event)">
-    </app-search-bar>
+      <div class="filter-group">
+  <h4>Education Level</h4>
+  <label class="checkbox-row" *ngFor="let level of courseOptions">
+    <input type="checkbox" 
+           [checked]="filters.course.includes(level)" 
+           (change)="updateFilter('course', level)">
+    <span class="custom-checkbox"></span>
+    <span class="label-text">{{ level }}</span>
+  </label>
+</div>
 
-    <div class="scholarships-container"
-         [class.grid-view]="viewMode === 'grid'"
-         [class.list-view]="viewMode === 'list'">
+<div class="filter-group">
+  <h4>Location</h4>
+  <label class="checkbox-row" *ngFor="let state of stateOptions">
+    <input type="checkbox" 
+           [checked]="filters.state.includes(state)"
+           (change)="updateFilter('state', state)">
+    <span class="custom-checkbox"></span>
+    <span class="label-text">{{ state }}</span>
+  </label>
+</div>
+    </aside>
 
-      <app-scholarship-card
-        *ngFor="let scholarship of filteredScholarships"
-        [scholarship]="scholarship"
-        [viewMode]="viewMode">
-      </app-scholarship-card>
 
-    </div>
+    <main class="main-content">
+      
+      <h1 class="page-title">{{ pageTitle }}</h1>
+
+      <div class="pro-search-bar">
+        <span class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        
+        <input 
+          type="text" 
+          [placeholder]="'Search by name, provider, or keyword...'"
+          (keyup)="onSearch($any($event.target).value)"
+        >
+        
+        <button class="search-action-btn">Search</button>
+      </div>
+
+      <div class="results-meta">
+        <span>Showing <strong>{{ filteredScholarships.length }}</strong> opportunities</span>
+      </div>
+
+      <div class="scholarships-grid">
+        
+        <div *ngIf="isLoading" class="loading-state">
+          <div class="spinner"></div>
+          <p>Finding opportunities...</p>
+        </div>
+
+        <div *ngIf="!isLoading && filteredScholarships.length === 0" class="empty-state">
+          <p>No opportunities found matching your criteria.</p>
+          <button (click)="resetFilters()">Clear Filters</button>
+        </div>
+
+        <app-scholarship-card
+          *ngFor="let scholarship of filteredScholarships"
+          [scholarship]="scholarship"
+          [viewMode]="'grid'"
+          [showCategory]="!filters.category">
+        </app-scholarship-card>
+      </div>
+
+    </main>
+
   </div>
 </div>

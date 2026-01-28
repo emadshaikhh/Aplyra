@@ -24,7 +24,8 @@ export class ScholarshipService {
     return this.dataService.getScholarships().pipe(
       map(scholarships => {
         return scholarships.filter(scholarship => {
-          // Search term filter
+          
+          // 1. Search Term (Name, Provider, or Description)
           if (filters.searchTerm) {
             const searchLower = filters.searchTerm.toLowerCase();
             const matchesSearch = 
@@ -35,21 +36,24 @@ export class ScholarshipService {
             if (!matchesSearch) return false;
           }
 
-          // Course filter
-          if (filters.course && scholarship.course !== filters.course) {
+          // 2. Category Filter (Single Select)
+          if (filters.category && scholarship.category !== filters.category) {
             return false;
           }
 
-          // State filter
-          if (filters.state && filters.state !== 'All India') {
-            if (scholarship.state !== filters.state && scholarship.state !== 'All India') {
+          // 3. Course Filter (MULTI-SELECT)
+          // If user selected courses, only show if scholarship's course is in that list
+          if (filters.course && filters.course.length > 0) {
+            if (!filters.course.includes(scholarship.course)) {
               return false;
             }
           }
 
-          // Category filter
-          if (filters.category && scholarship.category !== filters.category) {
-            return false;
+          // 4. State Filter (MULTI-SELECT with 'All India' logic)
+          // Show if state matches one of the selected states OR is 'All India'
+          if (filters.state && filters.state.length > 0) {
+            const isMatch = filters.state.includes(scholarship.state) || scholarship.state === 'All India';
+            if (!isMatch) return false;
           }
 
           return true;

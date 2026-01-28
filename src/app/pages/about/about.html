@@ -1,100 +1,218 @@
 <div class="about-page">
-  <div class="container">
-
-    <!-- Hero Section -->
-    <section class="about-hero">
-      <h1>About Aplyra</h1>
-      <p class="hero-subtitle">
-        Empowering students to discover and access educational opportunities across India
-      </p>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission-section">
-      <div class="mission-content">
-        <h2>Our Mission</h2>
-        <p>
-          Aplyra is dedicated to making educational opportunities accessible to every student in India. 
-          We believe that financial constraints should never be a barrier to quality education. Our platform 
-          aggregates scholarships, internships, and government schemes from verified sources, making it easier 
-          for students to discover opportunities they qualify for.
-        </p>
-        <p>
-          We don't accept applications directly or store sensitive personal information. Instead, we act as a 
-          trusted discovery platform that connects students with official opportunity providers, ensuring transparency 
-          and security throughout the process.
+  
+  <section class="about-hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="badge-pill">Our Story</span>
+        <h1>Empowering Students <br><span class="text-gradient">Across India</span></h1>
+        <p class="hero-subtitle">
+          We believe financial constraints should never be a barrier to quality education. 
+          Aplyra bridges the gap between talent and opportunity.
         </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- What We Do Section -->
-    <section class="what-we-do">
-      <h2 class="section-title">What We Do</h2>
+  <section class="mission-section">
+    <div class="container">
+      <div class="mission-grid">
+  <div class="mission-text">
+    <h2>More than just a search engine.</h2>
+    <p>
+      Aplyra is dedicated to making educational opportunities accessible to every student in India. 
+      We aggregate scholarships, internships, and government schemes from verified sources, making it 
+      easier for students to discover opportunities they qualify for.
+    </p>
+    <p>
+      We don't accept applications directly or store sensitive personal information. Instead, we act as a 
+      <strong>trusted discovery platform</strong> that connects students with official opportunity providers, 
+      ensuring transparency and security throughout the process.
+    </p>
+  </div>
+
+  <div class="trust-stats-grid">
+    
+    <div class="trust-pod">
+      <div class="pod-icon icon-shield">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 22S20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="pod-content">
+        <h3>100% Free</h3>
+        <p>For students, forever. No hidden fees.</p>
+      </div>
+    </div>
+
+    <div class="trust-pod">
+      <div class="pod-icon icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.59834 17.4371C2.41203 15.628 1.83029 13.489 1.93984 11.3316C2.04939 9.17418 2.8446 7.11393 4.20796 5.45609C5.57132 3.79825 7.43129 2.6324 9.50807 2.13045C11.5848 1.62849 13.768 1.81703 15.73 2.67" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="pod-content">
+        <h3>Official & Verified</h3>
+        <p>Direct links to government & institutional sources.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What We Do</h2>
+        <p>We simplify the complex landscape of educational funding.</p>
+      </div>
+      
       <div class="features-grid">
-        <div class="feature-card" *ngFor="let feature of features">
-          <div class="feature-icon">{{ feature.icon }}</div>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
+  
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+    </div>
+    <h3>Comprehensive Database</h3>
+    <p>Access thousands of verified scholarships, internships, and government schemes from across India.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <path d="M16 2v4M14 4h4"/> </svg>
+    </div>
+    <h3>Smart Search & Filters</h3>
+    <p>Find opportunities that match your profile perfectly with our intelligent filtering system.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <h3>Verified Information</h3>
+    <p>All opportunities are verified from official sources including government portals and institutions.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+    </div>
+    <h3>Deadline Tracking</h3>
+    <p>Never miss an opportunity with clear deadline highlights and timely reminders.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+    </div>
+    <h3>Privacy First</h3>
+    <p>We don't store your personal data. You apply directly on the official provider websites.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+      </svg>
+    </div>
+    <h3>Mobile Friendly</h3>
+    <p>Access Aplyra on any device—desktop, tablet, or mobile—for searching on the go.</p>
+  </div>
+
+</div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How Aplyra Works</h2>
+        <p>Your journey to funding in three simple steps.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-badge">1</div>
+          <h3>Search & Discover</h3>
+          <p>Use our smart filters to find scholarships, internships, and schemes that match your specific profile.</p>
+        </div>
+        
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-badge">2</div>
+          <h3>Review Details</h3>
+          <p>View complete information including eligibility criteria, required documents, and official deadlines.</p>
+        </div>
+
+        <div class="step-connector"></div>
+
+        <div class="step-card">
+          <div class="step-badge">3</div>
+          <h3>Apply Directly</h3>
+          <p>Click through to the official provider's website to complete your application securely.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-      <h2 class="section-title">Our Values</h2>
+  <section class="values-section">
+    <div class="container">
+      <h2 class="section-title">Our Core Values</h2>
       <div class="values-grid">
         <div class="value-card" *ngFor="let value of values">
           <h3>{{ value.title }}</h3>
           <p>{{ value.description }}</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-      <h2 class="section-title">How Aplyra Works</h2>
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Search & Discover</h3>
-          <p>Use our smart filters to find scholarships, internships, and schemes that match your profile.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Review Details</h3>
-          <p>View complete information including eligibility criteria, required documents, and deadlines.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Apply Directly</h3>
-          <p>Click through to the official provider's website to complete your application securely.</p>
+  <section class="transparency-section">
+    <div class="container">
+      <div class="transparency-box">
+        <div class="box-icon">🛡️</div>
+        <div class="box-content">
+          <h3>Our Commitment to Transparency</h3>
+          <div class="checklist-grid">
+            <div class="check-item"><span>✓</span> Aplyra is a discovery platform, not an application portal</div>
+            <div class="check-item"><span>✓</span> We verify all opportunities from trusted sources</div>
+            <div class="check-item"><span>✓</span> We do not collect sensitive personal data</div>
+            <div class="check-item"><span>✓</span> Our service is completely free for students</div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Important Note -->
-    <section class="note-section">
-      <div class="note-box">
-        <div class="note-icon">ℹ️</div>
-        <div class="note-content">
-          <h3>Important to Know</h3>
-          <ul>
-            <li>Aplyra is a discovery platform, not an application portal</li>
-            <li>We do not accept applications or collect sensitive personal data</li>
-            <li>All applications are completed on official provider websites</li>
-            <li>We verify all opportunities from trusted government and institutional sources</li>
-            <li>Our service is completely free for students</li>
-          </ul>
-        </div>
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Find Your Opportunity?</h2>
+        <p>Start exploring scholarships and opportunities that match your goals today.</p>
+        <a routerLink="/scholarships" class="cta-button">Browse Opportunities</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <h2>Ready to Find Your Opportunity?</h2>
-      <p>Start exploring scholarships and opportunities that match your goals today.</p>
-      <a routerLink="/scholarships" class="cta-button">Browse Opportunities</a>
-    </section>
-
-  </div>
 </div>

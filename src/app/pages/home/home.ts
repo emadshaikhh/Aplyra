@@ -1,69 +1,62 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { SearchBarComponent } from '../../shared/components/search-bar/search-bar';
+import { Router } from '@angular/router'; // Import Router
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SearchBarComponent],
+  imports: [CommonModule, FormsModule],
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })
 export class HomeComponent {
-  features = [
-    {
-      icon: '🎯',
-      title: 'Smart Filters',
-      description: 'Find opportunities that match your profile with intelligent filtering'
-    },
-    {
-      icon: '✓',
-      title: 'Verified Sources',
-      description: 'All opportunities verified from official government and institutional sources'
-    },
-    {
-      icon: '📅',
-      title: 'Deadline Tracking',
-      description: 'Never miss an opportunity with organized deadline information'
-    }
-  ];
 
+  // --- 1. CATEGORY DATA (With 'path' for routing) ---
   categories = [
-    {
-      name: 'Scholarships',
-      icon: '🎓',
-      description: 'Financial aid for education',
-      route: '/scholarships',
-      query: { category: 'scholarship' }
+    { 
+      name: 'Scholarships', 
+      icon: '🎓', 
+      description: 'Financial aid for tuition, books, and living costs based on merit or need.',
+      path: '/scholarships' // Matches your app.routes.ts
     },
-    {
-      name: 'Internships',
-      icon: '💼',
-      description: 'Gain practical experience',
-      route: '/scholarships',
-      query: { category: 'internship' }
+    { 
+      name: 'Government Schemes', 
+      icon: '🏛️', 
+      description: 'Official state and central government initiatives for student welfare.',
+      path: '/schemes'      // Matches your app.routes.ts
     },
-    {
-      name: 'Government Schemes',
-      icon: '🏛️',
-      description: 'Welfare programs & benefits',
-      route: '/scholarships',
-      query: { category: 'scheme' }
+    { 
+      name: 'Internships', 
+      icon: '💼', 
+      description: 'Gain real-world experience with top companies and startups.',
+      path: '/internships'  // Matches your app.routes.ts
+    },
+    { 
+      name: 'Competitions', 
+      icon: '🏆', 
+      description: 'Hackathons, quizzes, and coding challenges to showcase your skills.',
+      path: '/scholarships' // Fallback to list (or make a new page later)
     }
   ];
 
-  constructor(private router: Router) {}
+  // --- 2. TRUST/FEATURE DATA ---
+  features = [
+    { title: 'Smart Filters', description: 'Stop searching blindly. Our algorithm matches opportunities strictly to your profile.' },
+    { title: 'Verified Sources', description: 'We manually verify every listing. No dead links, no fake scams.' },
+    { title: 'Deadline Tracking', description: 'Never miss a date. We highlight deadlines in red so you prioritize what ends soon.' }
+  ];
 
-  onSearch(searchTerm: string) {
-    this.router.navigate(['/scholarships'], {
-      queryParams: { search: searchTerm }
-    });
+  constructor(private router: Router) {} // Inject Router
+
+  // --- 3. NAVIGATION LOGIC ---
+  navigateToCategory(category: any) {
+    this.router.navigate([category.path]);
   }
 
-  navigateToCategory(category: any) {
-    this.router.navigate([category.route], {
-      queryParams: category.query
-    });
+  onSearch(term: string) {
+    if (term) {
+      this.router.navigate(['/scholarships'], { queryParams: { search: term } });
+    }
   }
 }

@@ -1,1 +1,45 @@
-<p>scholarship-card works!</p>
+<div class="card-container" 
+     [class.list-view]="viewMode === 'list'"
+     [routerLink]="['/scholarship', scholarship.id]">
+  
+  <div class="card-header">
+    <div class="header-top">
+      <span 
+        class="category-badge" 
+        *ngIf="showCategory" 
+        [ngClass]="scholarship.category">
+        {{ scholarship.category | titlecase }}
+      </span>
+      <span class="deadline-badge" [class.urgent]="isUrgent()">
+        {{ scholarship.deadline | date:'mediumDate' }}
+      </span>
+    </div>
+    
+    <div class="provider-info">
+      <div class="provider-logo">{{ scholarship.provider.charAt(0) }}</div>
+      <span class="provider-name">{{ scholarship.provider }}</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <h3 class="title">{{ scholarship.name }}</h3>
+    
+    <div class="meta-row">
+      <div class="meta-item amount">
+        <span class="label">Amount</span>
+        <span class="value">{{ scholarship.amount }}</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Eligibility</span>
+        <span class="value">{{ scholarship.course }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <span class="view-btn">
+      View Details <span class="arrow">→</span>
+    </span>
+  </div>
+
+</div>

@@ -5,37 +5,33 @@ import { FormsModule } from '@angular/forms';
 
 import { ScholarshipService } from '../../core/services/scholarship.service';
 import { Scholarship, ScholarshipFilters } from '../../core/services/models/scholarship.model';
-
 import { ScholarshipCardComponent } from '../../shared/components/scholarship-card/scholarship-card';
-import { SearchBarComponent } from '../../shared/components/search-bar/search-bar';
 
 @Component({
   selector: 'app-scholarships-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, ScholarshipCardComponent, SearchBarComponent],
+  imports: [CommonModule, FormsModule, ScholarshipCardComponent],
   templateUrl: './scholarships-list.html',
   styleUrls: ['./scholarships-list.scss']
 })
 export class ListComponent implements OnInit {
+  
+  // --- STATE VARIABLES ---
   filteredScholarships: Scholarship[] = [];
   isLoading = true;
-  viewMode: 'grid' | 'list' = 'grid';
+  pageTitle: string = 'Explore Opportunities'; 
 
+  // --- FILTERS STATE (Now using Arrays for Multi-Select) ---
   filters: ScholarshipFilters = {
     searchTerm: '',
-    course: '',
-    state: '',
+    course: [], // <--- Changed to empty Array
+    state: [],  // <--- Changed to empty Array
     category: ''
   };
 
-  courseOptions = ['Undergraduate', 'Postgraduate'];
-  stateOptions = ['All India', 'Jammu and Kashmir'];
-  categoryOptions = [
-    { value: '', label: 'All' },
-    { value: 'scholarship', label: 'Scholarships' },
-    { value: 'internship', label: 'Internships' },
-    { value: 'scheme', label: 'Schemes' }
-  ];
+  // --- FILTER OPTIONS ---
+  courseOptions = ['Class 10', 'Class 12', 'Undergraduate', 'Postgraduate', 'Diploma'];
+  stateOptions = ['All India', 'Uttar Pradesh', 'Maharashtra', 'Delhi', 'Bihar'];
 
   constructor(
     private service: ScholarshipService,
@@ -44,9 +40,18 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.route.data.subscribe(data => {
+      if (data['category']) {
+        this.filters.category = data['category'];
+        this.pageTitle = data['title'];
+      }
+    });
+
     this.route.queryParams.subscribe(params => {
-      this.filters.searchTerm = params['search'] || '';
-      this.filters.category = params['category'] || '';
+      if (params['search']) this.filters.searchTerm = params['search'];
+      if (!this.filters.category && params['category']) {
+         this.filters.category = params['category'];
+      }
       this.load();
     });
   }
@@ -64,11 +69,26 @@ export class ListComponent implements OnInit {
     this.load();
   }
 
-  onFilterChange() {
-    this.load();
+  // --- MULTI-SELECT FILTER LOGIC ---
+  updateFilter(type: 'course' | 'state', value: string) {
+    const list = this.filters[type]; // Get the current array (e.g. ['Class 10'])
+
+    if (list.includes(value)) {
+      // IF EXISTS: Remove it (Uncheck)
+      this.filters[type] = list.filter(item => item !== value);
+    } else {
+      // IF NOT EXISTS: Add it (Check)
+      this.filters[type].push(value);
+    }
+    
+    this.load(); // Reload data immediately
   }
 
-  toggleViewMode() {
-    this.viewMode = this.viewMode === 'grid' ? 'list' : 'grid';
+  resetFilters() {
+    // Reset to empty arrays
+    this.filters.course = [];
+    this.filters.state = [];
+    this.filters.searchTerm = '';
+    this.load();
   }
 }

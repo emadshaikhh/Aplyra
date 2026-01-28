@@ -1,23 +1,34 @@
+export type ScholarshipCategory = 'scholarship' | 'internship' | 'scheme' | string;
+
 export interface Scholarship {
   id: string;
   name: string;
   provider: string;
-  category: 'scholarship' | 'internship' | 'scheme';
-  deadline: string;
+  category: ScholarshipCategory;
   amount: string;
+  deadline: string;
+  
+  // Details
   course: string;
   state: string;
   incomeLimit: string;
+  
+  // Content
   description: string;
   eligibility: string[];
   documents: string[];
+  
+  // External
   officialLink: string;
+  
+  // Optional
+  tags?: string[];
+  providerLogo?: string;
 }
 
 export interface ScholarshipFilters {
-  course?: string;
-  state?: string;
-  incomeLimit?: string;
+  searchTerm: string;
+  course: string[]; 
+  state: string[];  
   category?: string;
-  searchTerm?: string;
 }
