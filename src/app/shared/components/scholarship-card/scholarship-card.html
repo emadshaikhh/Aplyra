@@ -18,7 +18,10 @@
 
       <div class="title-section">
         <span class="provider-name">{{ scholarship.provider }}</span>
-        <h3 class="title">{{ scholarship.name }}</h3>
+        
+        <h3 class="title" [title]="scholarship.name">
+          {{ scholarship.name }}
+        </h3>
       </div>
     </div>
   </div>
@@ -27,11 +30,15 @@
     <div class="meta-row">
       <div class="meta-item amount">
         <span class="label">Amount</span>
-        <span class="value">{{ scholarship.amount }}</span>
+        <span class="value" [title]="scholarship.amount">
+          {{ scholarship.amount }}
+        </span>
       </div>
       <div class="meta-item">
         <span class="label">Eligibility</span>
-        <span class="value">{{ scholarship.course }}</span>
+        <span class="value" [title]="scholarship.course">
+          {{ scholarship.course }}
+        </span>
       </div>
     </div>
   </div>

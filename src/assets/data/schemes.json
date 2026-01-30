@@ -1,18 +1,896 @@
 [
   {
     "id": "schm-001",
-    "name": "PM Yasasvi Scheme",
+    "name": "PM YASASVI Entrance Test (YET)",
     "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
     "category": "scheme",
-    "deadline": "2026-08-30",
-    "amount": "₹75,000 - ₹1,25,000",
-    "course": "Class 9-12",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
     "state": "All India",
     "incomeLimit": "₹2,50,000",
-    "description": "Scholarship scheme for OBC, EBC and DNT students.",
-    "eligibility": ["OBC/EBC/DNT category", "Family income below ₹2.5 Lakhs"],
-    "documents": ["Caste Certificate", "Income Certificate"],
-    "officialLink": "https://yet.nta.ac.in",
-    "providerImage": "assets/images/providers/moe-logo.png"
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+
+
+
+   {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  }, {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+ {
+    "id": "schm-001",
+    "name": "PM YASASVI Entrance Test (YET)",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-08-10",
+    "amount": "₹75,000 - ₹1,25,000 / year",
+    "course": "Class 9 to 12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "A scholarship scheme for Other Backward Class (OBC), Economically Backward Class (EBC), and De-Notified Tribes (DNT) students.",
+    "eligibility": [
+      "Must belong to OBC/EBC/DNT category",
+      "Studying in Class 9 or 11 in identified schools",
+      "Parents' annual income not more than ₹2.5 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Previous Class Marksheet"
+    ],
+    "officialLink": "https://yet.nta.ac.in"
+  },
+  {
+    "id": "schm-002",
+    "name": "PM Vishwakarma Yojana",
+    "provider": "Ministry of MSME",
+    "providerImage": "assets/images/providers/msme-logo.png",
+    "category": "scheme",
+    "deadline": "Open All Year",
+    "amount": "₹500/day Stipend + ₹15,000 for Toolkit",
+    "course": "Skill Training",
+    "state": "All India",
+    "incomeLimit": "No Limit",
+    "description": "Skill training and financial support for traditional artisans and craftspeople (Vishwakarmas) to upgrade their skills.",
+    "eligibility": [
+      "Must be an artisan or craftsperson",
+      "Minimum age 18 years",
+      "Not availed similar loan schemes in past 5 years"
+    ],
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Skill Certificate (if any)"
+    ],
+    "officialLink": "https://pmvishwakarma.gov.in"
+  },
+  {
+    "id": "schm-003",
+    "name": "National Overseas Scholarship",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scheme",
+    "deadline": "2026-03-31",
+    "amount": "Full Tuition + Airfare + Maintenance",
+    "course": "Masters/Ph.D. Abroad",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Financial assistance for low-income students belonging to SC/ST categories to pursue Master's or Ph.D. degrees abroad.",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC) or Landless Agricultural Labour",
+      "Secured admission in a foreign university",
+      "Below 35 years of age"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Offer Letter",
+      "Passport"
+    ],
+    "officialLink": "https://nosmsje.gov.in"
+  },
+  {
+    "id": "schm-004",
+    "name": "Saksham Scholarship Scheme",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scheme",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000 / year",
+    "course": "Degree/Diploma",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "A scheme aimed at providing encouragement and financial support to specially-abled children to pursue technical education.",
+    "eligibility": [
+      "Disability of not less than 40%",
+      "Admitted to 1st year of Degree/Diploma level course",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Disability Certificate",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
   }
+
 ]

@@ -18,14 +18,18 @@ export class ListComponent implements OnInit {
   
   // --- STATE ---
   showMobileFilters = false;
-  filteredScholarships: Scholarship[] = [];
   isLoading = true;
   pageTitle: string = 'Explore Opportunities'; 
   
-  // 1. PAGE TYPE VARIABLE
-  pageType: 'scholarships' | 'internships' | 'schemes' = 'scholarships';
+  // NEW: Pagination State
+  allScholarships: Scholarship[] = [];      // Stores the FULL list from API
+  displayedScholarships: Scholarship[] = []; // Stores only the 12 visible items
+  currentPage: number = 1;
+  itemsPerPage: number = 12;
+  totalPages: number = 0;
+  pageNumbers: number[] = [];
 
-  // Dynamic Placeholder Text
+  pageType: 'scholarships' | 'internships' | 'schemes' = 'scholarships';
   searchPlaceholder = 'Search by name, provider, or keyword...';
 
   filters: ScholarshipFilters = {
@@ -35,19 +39,12 @@ export class ListComponent implements OnInit {
     category: ''
   };
 
-  // 2. DEFINE SPECIFIC FILTER OPTIONS
-  // For Scholarships
+  // Filter Options (Same as before)
   scholarshipClassOptions = ['Class 10', 'Class 12', 'Undergraduate', 'Postgraduate', 'Diploma'];
-  
-  // For Internships
   internshipRoles = ['Web Development', 'App Development', 'Data Science', 'Marketing', 'Content Writing'];
   internshipDuration = ['1 Month', '3 Months', '6 Months', 'Remote', 'On-site'];
-
-  // For Govt Schemes
   schemeIncomeGroups = ['< 2.5 Lakh', '2.5 - 5 Lakh', '> 5 Lakh', 'EWS'];
   schemeCategories = ['General', 'OBC', 'SC/ST', 'Minority', 'Women'];
-
-  // Common
   stateOptions = ['All India', 'Uttar Pradesh', 'Maharashtra', 'Delhi', 'Bihar'];
 
   constructor(
@@ -57,7 +54,6 @@ export class ListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // 3. DETECT PAGE TYPE FROM URL
     const url = this.router.url;
     
     if (url.includes('internships')) {
@@ -71,9 +67,8 @@ export class ListComponent implements OnInit {
       this.pageTitle = 'Explore Scholarships';
     }
 
-    this.checkScreenSize(); // Set initial placeholder based on type & size
+    this.checkScreenSize();
 
-    // Handle Route Data (e.g., coming from Category Cards)
     this.route.data.subscribe(data => {
       if (data['category']) {
         this.filters.category = data['category'];
@@ -90,18 +85,15 @@ export class ListComponent implements OnInit {
     });
   }
 
-  // --- LISTEN FOR RESIZE ---
   @HostListener('window:resize') 
   onResize() {
     this.checkScreenSize();
   }
 
   checkScreenSize() {
-    // If width < 768px, use short generic text
     if (window.innerWidth < 768) {
       this.searchPlaceholder = 'Search opportunities...';
     } else {
-      // Desktop: Use specific text based on Page Type
       if (this.pageType === 'internships') {
          this.searchPlaceholder = 'Search by role, company, or skill...';
       } else if (this.pageType === 'schemes') {
@@ -114,12 +106,7 @@ export class ListComponent implements OnInit {
 
   toggleFilters() {
     this.showMobileFilters = !this.showMobileFilters;
-    // Prevent background scrolling when menu is open
-    if (this.showMobileFilters) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = this.showMobileFilters ? 'hidden' : 'auto';
   }
 
   closeFilters() {
@@ -130,20 +117,46 @@ export class ListComponent implements OnInit {
   load() {
     this.isLoading = true;
     
-    // Pass 'this.pageType' to the service
     this.service.searchScholarships(this.filters, this.pageType).subscribe({
       next: (res) => {
-        this.filteredScholarships = res;
+        // NEW: Store full result separately
+        this.allScholarships = res;
+        
+        // NEW: Calculate Pagination
+        this.currentPage = 1; // Reset to page 1 on new search
+        this.totalPages = Math.ceil(this.allScholarships.length / this.itemsPerPage);
+        this.pageNumbers = Array(this.totalPages).fill(0).map((x, i) => i + 1);
+        
+        // NEW: Slice the first page
+        this.updatePaginatedList();
+        
         this.isLoading = false;
-        console.log('Data loaded successfully:', res); // Debug log
+        console.log('Data loaded:', res.length, 'items'); 
       },
       error: (err) => {
-        console.error('Error loading data:', err); // check your console for this!
+        console.error('Error loading data:', err);
         this.isLoading = false;
-        // Optional: Set empty list to avoid breaking UI
-        this.filteredScholarships = [];
+        this.allScholarships = [];
+        this.displayedScholarships = [];
       }
     });
+  }
+
+  // NEW: Helper to slice the array
+  updatePaginatedList() {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    this.displayedScholarships = this.allScholarships.slice(startIndex, endIndex);
+    
+    // Smooth scroll to top of list
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // NEW: Button Action
+  changePage(page: number) {
+    if (page < 1 || page > this.totalPages) return;
+    this.currentPage = page;
+    this.updatePaginatedList();
   }
 
   onSearch(term: string) {
@@ -159,27 +172,22 @@ export class ListComponent implements OnInit {
       this.filters[type].push(value);
     }
     
-    // Only load immediately if we are on Desktop (drawer is closed)
     if (!this.showMobileFilters) {
       this.load(); 
     }
   }
 
   applyFilters() {
-    this.load();          // Fetch the data now
-    this.closeFilters();  // Close the drawer
+    this.load();
+    this.closeFilters();
   }
 
   resetFilters() {
     this.filters.course = [];
     this.filters.state = [];
     this.filters.searchTerm = '';
-    
-    // Reset category if not schemes
     if (this.pageType === 'schemes') this.filters.category = '';
-
     this.load();
-    // Optional: Close drawer on reset if on mobile
     if (window.innerWidth < 768) this.closeFilters(); 
   }
 }

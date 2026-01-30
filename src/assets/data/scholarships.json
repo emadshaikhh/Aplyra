@@ -15,7 +15,11 @@
       "Minimum 75% in Class 12",
       "Family income below ₹8 lakhs"
     ],
-    "documents": ["Class 12 marksheet", "Income certificate", "Aadhaar card"],
+    "documents": [
+      "Class 12 marksheet",
+      "Income certificate",
+      "Aadhaar card"
+    ],
     "officialLink": "https://scholarships.gov.in",
     "providerImage": "assets/images/providers/moe-logo.png"
   },
@@ -30,8 +34,14 @@
     "state": "All India",
     "incomeLimit": "₹2,50,000",
     "description": "Financial assistance for SC/ST students pursuing postgraduate studies.",
-    "eligibility": ["Belongs to SC/ST category", "Enrolled in postgraduate course"],
-    "documents": ["Caste certificate", "Income certificate"],
+    "eligibility": [
+      "Belongs to SC/ST category",
+      "Enrolled in postgraduate course"
+    ],
+    "documents": [
+      "Caste certificate",
+      "Income certificate"
+    ],
     "officialLink": "https://scholarships.gov.in",
     "providerImage": "assets/images/providers/mosje-logo.png"
   },
@@ -46,8 +56,14 @@
     "state": "Jammu and Kashmir",
     "incomeLimit": "₹6,00,000",
     "description": "Scholarship for students from J&K pursuing undergraduate studies outside the state.",
-    "eligibility": ["Domicile of J&K", "Studying outside J&K"],
-    "documents": ["Domicile certificate", "Class 12 marksheet"],
+    "eligibility": [
+      "Domicile of J&K",
+      "Studying outside J&K"
+    ],
+    "documents": [
+      "Domicile certificate",
+      "Class 12 marksheet"
+    ],
     "officialLink": "https://aicte-india.org",
     "providerImage": "assets/images/providers/moe-logo.png"
   },
@@ -62,8 +78,14 @@
     "state": "All India",
     "incomeLimit": "₹4,50,000",
     "description": "Merit-cum-means scholarship for students from economically weaker sections.",
-    "eligibility": ["Family income below ₹4.5 lakhs", "Minimum 80% in Class 12"],
-    "documents": ["Income certificate", "Class 12 marksheet"],
+    "eligibility": [
+      "Family income below ₹4.5 lakhs",
+      "Minimum 80% in Class 12"
+    ],
+    "documents": [
+      "Income certificate",
+      "Class 12 marksheet"
+    ],
     "officialLink": "https://scholarships.gov.in",
     "providerImage": "assets/images/providers/moe-logo.png"
   },
@@ -78,8 +100,14 @@
     "state": "All India",
     "incomeLimit": "₹2,00,000",
     "description": "Scholarship for students from minority communities.",
-    "eligibility": ["Minority community", "Family income below ₹2 lakhs"],
-    "documents": ["Community certificate", "Income certificate"],
+    "eligibility": [
+      "Minority community",
+      "Family income below ₹2 lakhs"
+    ],
+    "documents": [
+      "Community certificate",
+      "Income certificate"
+    ],
     "officialLink": "https://scholarships.gov.in",
     "providerImage": "assets/images/providers/mofa-logo.png"
   },
@@ -232,5 +260,852 @@
       "Declaration by Parents"
     ],
     "officialLink": "https://scholarships.gov.in"
-  }
+  },
+  {
+    "id": "sch-spdc-2025-26",
+    "name": "Scholarship Programme for Diaspora Children (SPDC) 2025–26",
+    "provider": "Ministry of External Affairs, Government of India",
+    "category": "scholarship",
+    "deadline": "2026-01-30",
+    "amount": "Up to $4,000 per year",
+    "course": "Undergraduate",
+    "state": "India",
+    "incomeLimit": "As per MEA prescribed limits",
+    "description": "A Government of India scholarship offered by the Ministry of External Affairs to support children of the Indian diaspora pursuing undergraduate studies in recognised Indian institutions.",
+    "eligibility": [
+      "Child of PIO, OCI, or NRI",
+      "Child of Indian workers in ECR countries",
+      "Age between 17 and 21 years as on 31 July 2025",
+      "Passed Class 12 with minimum 60% aggregate marks",
+      "Completed Class 11 and 12 from abroad (exceptions for ECR countries)",
+      "Enrolled in a full-time regular undergraduate program",
+      "Admitted to UGC-recognised or NAAC A-grade institutions, Central Universities, NITs, SPAs or IIITs",
+      "Family income within prescribed limits",
+      "Not receiving any other State or Central Government scholarship"
+    ],
+    "documents": [
+      "Academic transcripts of Class 11 and 12",
+      "Class 11 and 12 passing certificates",
+      "Valid passport copy",
+      "Parents work permit",
+      "PIO or OCI card or proof of Indian origin",
+      "NRI certificate",
+      "Income or salary certificate of parents",
+      "Declaration of not receiving any other scholarship",
+      "Passport size photograph",
+      "Admission confirmation letter",
+      "Institutional undertaking",
+      "Parent or guardian declaration form"
+    ],
+    "officialLink": "[https://www.mea.gov.in](https://www.mea.gov.in)",
+    "providerImage": ""
+  },
+  {
+    "id": "sch-nurtr-chess-2025",
+    "name": "nurtr Nurturing Minds with Chess Program",
+    "provider": "nurtr (in collaboration with Buddy4Study)",
+    "category": "scholarship",
+    "deadline": "",
+    "amount": "Up to 90% fee waiver on course fee",
+    "course": "School and College",
+    "state": "India",
+    "incomeLimit": "Varies by income slab",
+    "description": "A chess-based learning program offering fee waivers on the nurtr Neo Chess Course to support the holistic development of school and college students through professional chess training.",
+    "eligibility": [
+      "Resident of India",
+      "School or college student",
+      "Age between 5 and 25 years",
+      "Family income within specified slabs"
+    ],
+    "documents": [
+      "Student ID proof",
+      "Family income proof",
+      "Passport size photograph",
+      "Government ID proof",
+      "Self-declaration for income category"
+    ],
+    "officialLink": "[https://www.buddy4study.com](https://www.buddy4study.com)",
+    "providerImage": ""
+  },
+  {
+    "id": "sch-pmsss-2026",
+    "name": "Prime Minister's Special Scholarship Scheme",
+    "provider": "Ministry of Home Affairs, Government of India",
+    "category": "scholarship",
+    "deadline": "2026-05-20",
+    "amount": "₹30,000 per year",
+    "course": "Undergraduate",
+    "state": "Jammu and Kashmir",
+    "incomeLimit": "₹6,00,000 per annum",
+    "description": "A special scholarship scheme for students from Jammu and Kashmir pursuing undergraduate studies in institutions outside the state.",
+    "eligibility": [
+      "Domicile of Jammu and Kashmir",
+      "Passed Class 12 examination",
+      "Enrolled in undergraduate course outside Jammu and Kashmir",
+      "Family income within prescribed limit"
+    ],
+    "documents": [
+      "Domicile certificate",
+      "Class 12 marksheet",
+      "Income certificate",
+      "Admission proof",
+      "Bank account details"
+    ],
+    "officialLink": "[https://aicte-india.org](https://aicte-india.org)",
+    "providerImage": ""
+  },
+  {
+"id": "sch-iks-internship-2026-27",
+"name": "IKS Division Internship Program 2026-27",
+"provider": "Indian Knowledge System Division, Government of India",
+"category": "internship",
+"deadline": "2026-01-30",
+"amount": "Up to ₹10,000 per month",
+"course": "Undergraduate and Postgraduate",
+"state": "India",
+"incomeLimit": "Not specified",
+"description": "An internship program offered by the Indian Knowledge System Division to encourage students to engage in research and projects related to Indian Knowledge Systems across multiple disciplines, with a monthly fellowship and certificate.",
+"eligibility": [
+"Age between 16 and 30 years",
+"Pursuing or completed undergraduate degree",
+"Pursuing or completed postgraduate degree",
+"Enrolled in a recognised institution",
+"Applied under approved IKS disciplines",
+"Only one proposal per institution"
+],
+"documents": [
+"Project or research proposal",
+"Marksheet of last qualifying examination"
+],
+"officialLink": "[https://iksindia.org](https://iksindia.org)",
+"providerImage": ""
+},
+{
+"id": "sch-aspire-leaders-2026",
+"name": "Aspire Leaders Program 2026",
+"provider": "Aspire Institute",
+"category": "leadership-program",
+"deadline": "2026-01-30",
+"amount": "Fully funded program with grants up to ₹1,00,000",
+"course": "Any discipline (College students and graduates)",
+"state": "India",
+"incomeLimit": "For limited-income households or first-generation students",
+"description": "A fully funded 9-week online leadership development program designed to help students and young professionals build leadership, professional, and career-ready skills through masterclasses, mentorship, and global peer learning.",
+"eligibility": [
+"Age between 18 and 29 years",
+"From limited-income household or first-generation student",
+"Enrolled in or completed any college program",
+"Any field of study"
+],
+"documents": [],
+"officialLink": "[https://www.aspireleaders.org](https://www.aspireleaders.org)",
+"providerImage": ""
+},
+{
+"id": "sch-spdc-2025-26",
+"name": "Scholarship Programme for Diaspora Children (SPDC) 2025-26",
+"provider": "Ministry of External Affairs, Government of India",
+"category": "scholarship",
+"deadline": "2026-01-30",
+"amount": "Up to $4,000 per year",
+"course": "Undergraduate",
+"state": "India",
+"incomeLimit": "Up to $5,000 monthly (NRIs/PIOs/OCIs) or $3,000 monthly (children of Indian workers in ECR countries)",
+"description": "A Government of India scholarship offered by the Ministry of External Affairs to support children of the Indian diaspora pursuing full-time undergraduate studies in recognised Indian institutions.",
+"eligibility": [
+"Child of PIO, OCI, or NRI",
+"Child of Indian workers in ECR countries",
+"Age between 17 and 21 years as on 31 July 2025",
+"Passed Class 12 with minimum 60% aggregate marks",
+"Completed Class 11 and 12 from abroad or eligible Indian institutions",
+"Enrolled in a full-time regular undergraduate program",
+"Admitted to UGC-recognised or NAAC A-grade institutions, Central Universities, NITs, SPAs or IIITs",
+"Family income within prescribed limits",
+"Not receiving any other State or Central Government scholarship"
+],
+"documents": [
+"Academic transcripts of Class 11 and 12",
+"Class 11 and 12 passing certificates",
+"Valid passport copy",
+"Parents work permit",
+"PIO or OCI card or proof of Indian origin",
+"NRI certificate",
+"Income or salary certificate of parents",
+"Declaration of not receiving any other scholarship",
+"Passport size photograph",
+"Admission confirmation letter",
+"Institutional undertaking",
+"Parent or guardian declaration form"
+],
+"officialLink": "[https://www.mea.gov.in](https://www.mea.gov.in)",
+"providerImage": ""
+},
+{
+"id": "sch-nagaland-horticulture-2026",
+"name": "State Horticulture Scholarship, Nagaland 2026",
+"provider": "Department of Horticulture, Government of Nagaland",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Financial assistance (as per Government of Nagaland norms)",
+"course": "B.Sc. (Horticulture), M.Sc. (Horticulture), Ph.D. (Horticulture)",
+"state": "Nagaland",
+"incomeLimit": "Not specified",
+"description": "A state government scholarship offered by the Department of Horticulture, Nagaland to support indigenous students pursuing undergraduate, postgraduate, and doctoral studies in horticulture at UGC-recognised institutions.",
+"eligibility": [
+"Indigenous inhabitant of Nagaland",
+"Pursuing B.Sc., M.Sc., or Ph.D. in Horticulture",
+"Enrolled in a UGC-recognised institution",
+"Not receiving any other scholarship or stipend",
+"Minimum 75% attendance in classes",
+"Not a repeater in the same class"
+],
+"documents": [
+"Passport size photograph",
+"Mark sheets or certificates",
+"Caste certificate (if applicable)",
+"Income certificate (if applicable)",
+"Aadhaar card",
+"Bank passbook or bank statement"
+],
+"officialLink": "[https://scholarship.nagaland.gov.in](https://scholarship.nagaland.gov.in)",
+"providerImage": ""
+},
+{
+"id": "sch-cmfs-bihar-2026",
+"name": "Chief Minister’s Fellowship Scheme (CMFS), Bihar 2026",
+"provider": "Government of Bihar in partnership with IIM Bodh Gaya",
+"category": "fellowship",
+"deadline": "2026-01-31",
+"amount": "₹80,000 to ₹1,50,000 per month",
+"course": "Postgraduate (Master’s degree holders)",
+"state": "Bihar",
+"incomeLimit": "Not specified",
+"description": "A flagship fellowship program by the Government of Bihar aimed at engaging talented young professionals in governance, policy formulation, and administrative reforms, offering a high monthly honorarium and structured policy exposure.",
+"eligibility": [
+"Domicile of Bihar",
+"Age 45 years or below",
+"Postgraduate degree with minimum 55% marks",
+"Degree in Management, Policy, Public Administration, Science and Technology or allied fields",
+"Valid test score in CMAT, GMAT, GATE, GRE, UGC-NET or CSIR-NET",
+"Applicants from INI, Central Universities or NLUs exempted from test score submission"
+],
+"documents": [
+"Applicant photograph and signature",
+"Bihar domicile certificate",
+"Entrance test score card",
+"Category certificate (if applicable)",
+"Class 10 and 12 marksheets or certificates",
+"Undergraduate and postgraduate marksheets and degree certificates",
+"Experience certificates"
+],
+"officialLink": "[https://iimbg.ac.in](https://iimbg.ac.in)",
+"providerImage": ""
+},
+{
+"id": "sch-summer-research-academies-2026",
+"name": "Science Academies Summer Research Fellowship Program 2026",
+"provider": "Indian Academy of Sciences, Indian National Science Academy, and National Academy of Sciences India",
+"category": "fellowship",
+"deadline": "2026-01-31",
+"amount": "Fellowship opportunity",
+"course": "Science, Engineering and Medicine",
+"state": "India",
+"incomeLimit": "Not specified",
+"description": "A prestigious summer research fellowship jointly offered by India’s leading science academies to support outstanding students and teachers in pursuing research in science, engineering, and medicine under expert mentorship.",
+"eligibility": [
+"Student enrolled in eligible undergraduate or postgraduate programs",
+"Teacher working in a college or university",
+"Minimum 65% average marks in core subjects",
+"Studying or teaching in science, engineering or medicine",
+"PhD students are not eligible"
+],
+"documents": [
+"Mark sheets from Class 10 to last examination",
+"Project or research proposal",
+"Write-up on research interests",
+"Teacher contact details for recommendation",
+"Publications (for teacher applicants)",
+"Authorisation letter from institution (for selected teachers)"
+],
+"officialLink": "[https://www.ias.ac.in](https://www.ias.ac.in)",
+"providerImage": ""
+},
+{
+"id": "sch-pre-matric-st-andaman-2025-26",
+"name": "NSP Centrally Sponsored Pre-Matric Scholarship for ST Students (Class 9 & 10), Andaman and Nicobar 2025-26",
+"provider": "Ministry of Tribal Affairs, Government of India",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Up to ₹525 per month",
+"course": "Class 9 and Class 10",
+"state": "Andaman and Nicobar Islands",
+"incomeLimit": "Less than ₹2,50,000 per annum",
+"description": "A centrally sponsored pre-matric scholarship offered by the Ministry of Tribal Affairs to support Scheduled Tribe students of Classes 9 and 10 in Andaman and Nicobar Islands with monthly financial assistance, book grants, and additional disability allowance for eligible students.",
+"eligibility": [
+"Indian citizen",
+"Domicile of Andaman and Nicobar Islands",
+"Belonging to Scheduled Tribe category",
+"Studying in Class 9 or Class 10",
+"Enrolled in a recognised institution",
+"Annual family income below ₹2,50,000",
+"Not receiving any other centrally funded pre-matric scholarship"
+],
+"documents": [
+"Caste certificate",
+"Income certificate",
+"Domicile certificate",
+"Passport size photograph",
+"Academic certificates or marksheets"
+],
+"officialLink": "[https://scholarships.gov.in](https://scholarships.gov.in)",
+"providerImage": ""
+},
+{
+"id": "sch-ucas-international-2026",
+"name": "UCAS Scholarship for International Students 2026",
+"provider": "University of Chinese Academy of Sciences (UCAS)",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Tuition fee waiver, monthly stipend and other benefits",
+"course": "Master’s, PhD and Visiting Programs",
+"state": "International (China)",
+"incomeLimit": "Not specified",
+"description": "An international scholarship offered by the University of Chinese Academy of Sciences to support non-Chinese students pursuing graduate, doctoral and visiting programs with tuition fee waiver, monthly stipend, medical insurance and accommodation.",
+"eligibility": [
+"Non-Chinese citizen with valid foreign passport",
+"Proficiency in English or Chinese",
+"Meets UCAS admission requirements for international students",
+"Born on or after specified dates as per program level",
+"International graduate or postgraduate applicant"
+],
+"documents": [],
+"officialLink": "[https://english.ucas.ac.cn](https://english.ucas.ac.cn)",
+"providerImage": ""
+},
+{
+"id": "sch-hiig-internet-society-2026",
+"name": "HIIG Internet and Society Fellowship 2026",
+"provider": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
+"category": "fellowship",
+"deadline": "2026-01-31",
+"amount": "Variable benefits (non-monetary support)",
+"course": "Research Fellowship (Junior and Senior Fellows)",
+"state": "Germany",
+"incomeLimit": "Not specified",
+"description": "A prestigious 6-week international research fellowship supporting innovative researchers working at the intersection of society, technology, and democratic governance, offered by the Alexander von Humboldt Institute for Internet and Society.",
+"eligibility": [
+"Master’s degree with PhD in progress or planned (Junior Fellow)",
+"Advanced PhD holder or postdoctoral researcher (Senior Fellow)",
+"Demonstrated research experience",
+"Research focus on democratic change and knowledge",
+"Fluency in English",
+"Initial research idea for the fellowship period"
+],
+"documents": [
+"Curriculum Vitae (CV)",
+"Motivation letter",
+"Research idea outline",
+"Optional writing or work sample"
+],
+"officialLink": "[https://www.hiig.de](https://www.hiig.de)",
+"providerImage": ""
+},
+{
+"id": "sch-nsp-post-matric-st-andaman-2025-26",
+"name": "NSP Centrally Sponsored Post-Matric Scholarship for ST Students, Andaman and Nicobar",
+"provider": "Ministry of Tribal Affairs, Government of India",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Maintenance allowance up to ₹1,200 per month",
+"course": "Class 11 to PhD (Post-Matric)",
+"state": "Andaman and Nicobar Islands",
+"incomeLimit": "₹2,50,000 per annum",
+"description": "A centrally sponsored scholarship scheme for Scheduled Tribe students of Andaman and Nicobar Islands studying at post-matriculation or post-secondary level, providing maintenance allowance and additional benefits to support continuation of education.",
+"eligibility": [
+"Indian citizen",
+"Domicile of Andaman and Nicobar Islands",
+"Belonging to Scheduled Tribe (ST)",
+"Studying from Class 11 to PhD level",
+"Passed matriculation or higher secondary examination",
+"Annual family income below ₹2,50,000"
+],
+"documents": [
+"Domicile certificate",
+"Passport-size photograph",
+"Family income certificate",
+"ST caste certificate"
+],
+"officialLink": "[https://scholarships.gov.in](https://scholarships.gov.in)",
+"providerImage": ""
+},
+{
+"id": "sch-state-agri-nagaland-2025",
+"name": "State Agriculture Scholarship for B.Sc. & M.Sc. Agriculture, Nagaland 2025",
+"provider": "Directorate of Agriculture, Government of Nagaland",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Financial assistance",
+"course": "B.Sc. Agriculture, M.Sc. Agriculture",
+"state": "Nagaland",
+"incomeLimit": "Not specified",
+"description": "A state-level scholarship offered by the Directorate of Agriculture, Government of Nagaland, to provide financial assistance to students pursuing B.Sc. or M.Sc. in Agriculture at recognised institutions.",
+"eligibility": [
+"Indian national",
+"Domicile of Nagaland",
+"Pursuing B.Sc. or M.Sc. in Agriculture",
+"Enrolled in an institution with valid AISHE or UDISE code",
+"Own bank account",
+"Not receiving benefits from any other scholarship scheme",
+"Not a repeater in the current course"
+],
+"documents": [
+"Class 10 admit card",
+"Last semester progress report",
+"Admission receipt",
+"Caste certificate (if applicable)",
+"Indigenous inhabitant certificate (if applicable)",
+"Bank passbook or bank statement",
+"Institution verification form"
+],
+"officialLink": "[https://scholarship.nagaland.gov.in](https://scholarship.nagaland.gov.in)",
+"providerImage": ""
+},
+{
+"id": "sch-ffe-technical-2025",
+"name": "Foundation For Excellence Scholarship for Technical Courses 2025",
+"provider": "Foundation For Excellence India Trust",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "₹50,000 per year",
+"course": "BE/B.Tech, Integrated M.Tech, MBBS, 5-Year Integrated Law",
+"state": "All India",
+"incomeLimit": "₹3,00,000 per annum",
+"description": "A merit-cum-means scholarship offered by the Foundation For Excellence India Trust to support economically disadvantaged students pursuing professional technical courses, along with mentorship, skilling, and placement support.",
+"eligibility": [
+"Enrolled in 1st year of BE/B.Tech, Integrated M.Tech, MBBS, or 5-Year Law program",
+"Admission in 2025–26 academic year",
+"Passed Class 12 or equivalent in 2022 or later",
+"Minimum 70% marks in Class 12 or equivalent",
+"Admission through general/open merit rank via state or national entrance exam",
+"Annual family income not exceeding ₹3,00,000"
+],
+"documents": [
+"Class 12 marksheet",
+"Entrance exam rank certificate or scorecard",
+"Counselling or seat allotment letter",
+"Family income certificate or salary slips or ITR",
+"Tuition, hostel, and mess fee receipts",
+"Aadhaar card",
+"Bonafide certificate from college",
+"Estimated expenses statement from college",
+"Bank passbook copy"
+],
+"officialLink": "[https://www.foundationforexcellence.org](https://www.foundationforexcellence.org)",
+"providerImage": ""
+},
+{
+"id": "sch-india-space-lab-winter-2025",
+"name": "India Space Lab Winter Internship & Technical Training Program 2025-26",
+"provider": "India Space Lab",
+"category": "internship",
+"deadline": "2026-01-31",
+"amount": "Certificate of completion and technical training (training fee ₹950 may apply)",
+"course": "UG, PG, and Research Programs",
+"state": "All India",
+"incomeLimit": "",
+"description": "A winter internship and technical training program by India Space Lab aimed at providing hands-on exposure to space technology domains such as Drone Technology, CanSat and CubeSat, Rocketry, Remote Sensing (GIS), and Disaster Management. The program focuses on practical learning and real-world project experience.",
+"eligibility": [
+"Undergraduate student",
+"Postgraduate student",
+"Research scholar",
+"Enrolled in a recognised university or institution in India or abroad",
+"Interest in space technology and related fields"
+],
+"documents": [
+"Passport-size photograph"
+],
+"officialLink": "[https://isl.internship.indiaspaceweek.org](https://isl.internship.indiaspaceweek.org)",
+"providerImage": ""
+},
+{
+"id": "sch-asci-summer-research-2026",
+"name": "AScI International Summer Research Programme 2026",
+"provider": "Aalto University (Aalto Science Institute)",
+"category": "internship",
+"deadline": "2026-01-31",
+"amount": "€2,000 per month plus travel bonus and benefits",
+"course": "Bachelor’s, Master’s, and exceptional Doctoral programs",
+"state": "International (Finland)",
+"incomeLimit": "",
+"description": "A prestigious international summer research assistantship offered by Aalto University for research-oriented students in science and engineering. The programme provides full-time research experience for 12 weeks with financial support, travel bonus, and academic exposure in Finland.",
+"eligibility": [
+"Bachelor’s student",
+"Master’s student",
+"Doctoral student (exceptional cases)",
+"Strong academic background",
+"Research-oriented candidate",
+"Available for full-time work for 12 weeks"
+],
+"documents": [
+"Valid passport",
+"Academic transcripts and certificates",
+"Curriculum vitae",
+"Letter of motivation",
+"Proof of English proficiency"
+],
+"officialLink": "[https://www.aalto.fi](https://www.aalto.fi)",
+"providerImage": ""
+},
+{
+"id": "sch-sdex-fellowship-2026",
+"name": "Shastra Deep-tech Excellence (SDEX) Fellowship 2026",
+"provider": "Shastra Venture Capital",
+"category": "fellowship",
+"deadline": "2026-01-31",
+"amount": "Up to $100,000 equity-free funding",
+"course": "Research, Deep-tech Innovation, Engineering",
+"state": "International",
+"incomeLimit": "",
+"description": "A prestigious deep-tech fellowship by Shastra Venture Capital aimed at supporting researchers and innovators in translating breakthrough science into real-world applications through milestone-based, equity-free funding and expert mentorship.",
+"eligibility": [
+"PhD researcher",
+"Post-doctoral researcher",
+"Undergraduate student with research experience",
+"Postgraduate student with research experience",
+"Engineer in academic lab",
+"Scientist-founder or independent innovator",
+"Interest in translating research into real-world solutions"
+],
+"documents": [
+"Research or project details",
+"Professional or academic profile",
+"Application form details"
+],
+"officialLink": "[https://shastra.vc](https://shastra.vc)",
+"providerImage": ""
+},
+{
+"id": "sch-barc-ddfs-2026",
+"name": "BARC DAE Doctoral Fellowship Scheme (DDFS) 2026",
+"provider": "Bhabha Atomic Research Centre (BARC), Department of Atomic Energy",
+"category": "fellowship",
+"deadline": "2026-01-21",
+"amount": "₹80,000 per month + ₹60,000 annual contingency grant",
+"course": "Ph.D. (Engineering & Technology)",
+"state": "India",
+"incomeLimit": "",
+"description": "A prestigious doctoral fellowship by BARC to support outstanding engineering postgraduates pursuing Ph.D. programs under Homi Bhabha National Institute (HBNI), offering a high monthly fellowship, contingency grant, medical benefits, and hostel accommodation.",
+"eligibility": [
+"Indian citizen",
+"M.E./M.Tech./M.Sc.(Engg)/Integrated M.Tech with minimum 60% marks",
+"Relevant undergraduate engineering degree with minimum 60% marks",
+"Age up to 28 years for General category (age relaxation applicable)",
+"Eligible engineering disciplines as notified by BARC"
+],
+"documents": [
+"Passport-size photograph",
+"Scanned signature",
+"M.Tech semester marksheets",
+"All academic certificates",
+"Caste certificate (if applicable)",
+"Photo ID proof",
+"PWD certificate (if applicable)",
+"No Objection Certificate (if employed)"
+],
+"officialLink": "[https://barcocesexam.in](https://barcocesexam.in)",
+"providerImage": ""
+},
+{
+  "id": "sch-csir-iicb-sip-2026",
+  "name": "CSIR-IICB Summer Internship Program 2026",
+  "provider": "CSIR – Indian Institute of Chemical Biology",
+  "category": "internship",
+  "deadline": "2026-01-31",
+  "amount": "Research internship with academic exposure (duration 2 months to 1 year)",
+  "course": "MSc, Integrated Masters, Dual Degree, MTech, MPharm",
+  "state": "India",
+  "incomeLimit": "",
+  "description": "A prestigious summer internship program offered by CSIR-IICB, Kolkata, providing postgraduate students hands-on research experience in chemical and biological sciences under expert supervision. The program focuses on advanced laboratory research and academic development.",
+  "eligibility": [
+    "Postgraduate student in chemical or life sciences",
+    "Pursuing M.Sc./Integrated Masters/Dual degree/M.Tech/M.Pharm or related course",
+    "Enrolled in a recognized Indian university or institute",
+    "Minimum 65% marks from Class 10 onwards",
+    "Internship is a mandatory part of course curriculum"
+  ],
+  "documents": [
+    "Application Form-A with Statement of Purpose",
+    "10th class marksheet",
+    "12th class marksheet",
+    "Undergraduate degree marksheets",
+    "Postgraduate or integrated degree marksheets",
+    "Passport-size photograph",
+    "Recommendation letter"
+  ],
+  "officialLink": "https://www.csir.res.in",
+  "providerImage": ""
+},
+{
+  "id": "sch-odisha-banishree-2026",
+  "name": "Odisha Banishree Scholarship",
+  "provider": "Social Security and Empowerment of Persons with Disabilities Department, Government of Odisha",
+  "category": "scholarship",
+  "deadline": "2026-01-31",
+  "amount": "Up to ₹700 per month",
+  "course": "School to Postgraduate / Technical & Vocational",
+  "state": "Odisha",
+  "description": "Financial assistance for students with disabilities in Odisha to support education and vocational training.",
+  "eligibility": [
+    "Bonafide resident of Odisha",
+    "Valid UDID card holder",
+    "Students from Class 1 to Postgraduate level",
+    "Students in technical/vocational/professional training",
+    "Parents should not be income tax payers"
+  ],
+  "documents": [
+    "Passport-sized photograph",
+    "Academic transcripts",
+    "UDID card",
+    "Bank details"
+  ],
+  "officialLink": "https://scholarship.odisha.gov.in",
+  "providerImage": "assets/images/providers/odisha-govt.png"
+},
+{
+  "id": "sch-jncasr-srfp-2026",
+  "name": "JNCASR Summer Research Fellowship Programme (SRFP) 2026",
+  "provider": "Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR)",
+  "category": "fellowship",
+  "deadline": "2026-01-31",
+  "amount": "₹10,000 per month with minimal travel allowance",
+  "course": "Undergraduate and Postgraduate programs in Science and Engineering",
+  "state": "India",
+  "incomeLimit": "",
+  "description": "The JNCASR Summer Research Fellowship Programme (SRFP) 2026 offers motivated undergraduate and postgraduate students hands-on exposure to advanced scientific research by working closely with JNCASR faculty during the summer period. The programme aims to nurture research aptitude and academic excellence.",
+  "eligibility": [
+    "Indian citizen",
+    "Undergraduate student in science or engineering",
+    "Postgraduate student in science or engineering",
+    "Enrolled in BSc, BTech, BS, MSc, MTech, MS or equivalent programs",
+    "Minimum 65% marks in core subjects in Class 10 and 12",
+    "First Class performance in current degree semesters"
+  ],
+  "documents": [
+    "Passport-size photograph",
+    "Government-issued ID proof",
+    "Academic marksheets",
+    "Curriculum Vitae",
+    "Statement of Purpose",
+    "Recommendation letter"
+  ],
+  "officialLink": "https://www.jncasr.ac.in",
+  "providerImage": ""
+},
+{
+  "id": "sch-mamc-mbbs-2026",
+  "name": "Maulana Azad Medical College Scholarship Schemes 2026",
+  "provider": "Maulana Azad Medical College, Government of NCT of Delhi",
+  "providerImage": "",
+  "region": "India",
+  "level": "Undergraduate (MBBS)",
+  "award": "₹30,000 to ₹50,000 for one academic year",
+  "deadline": "2026-01-31",
+  "eligibility": [
+    "Student admitted to MBBS program at Maulana Azad Medical College (Academic Year 2025–26)",
+    "Annual family income below ₹2,00,000",
+    "Not availing any other scholarship scheme"
+  ],
+  "benefits": "Financial assistance for one year under various MAMC scholarship schemes based on merit and financial need.",
+  "documents": [
+    "Income Tax Assessment Order or Income Tax Return",
+    "Employer’s income certificate (if applicable)",
+    "Income certificate from Revenue Officer (BDO/SDM/Tehsildar)",
+    "Parents’ current bank passbook with updated address",
+    "Proof of MBBS admission at MAMC"
+  ],
+  "applicationMode": "Offline submission through respective academic departments after online registration",
+  "selectionCriteria": "Based on financial need, academic merit, and completeness of application documents",
+  "officialSource": "https://www.mamc.ac.in",
+  "lastVerified": "2026-01-31"
+},
+{
+  "id": "sch-tata-capital-pankh-2025-26",
+  "name": "Tata Capital Pankh Scholarship Program 2025–26",
+  "provider": "Tata Capital Limited",
+  "category": "scholarship",
+  "deadline": "2026-01-31",
+  "amount": "Up to 80% of tuition/course fees (₹10,000 to ₹1,00,000 depending on academic level)",
+  "course": "Class 11–12, Undergraduate, Professional Graduation/Postgraduation, Diploma/Polytechnic, ITI",
+  "state": "India",
+  "incomeLimit": "₹2,50,000 per annum",
+  "description": "The Tata Capital Pankh Scholarship Program 2025–26 is a CSR initiative by Tata Capital Limited aimed at supporting meritorious students from economically weaker sections. The scholarship helps reduce financial barriers by covering a significant portion of tuition or course fees across school, undergraduate, professional, and technical education levels.",
+  "eligibility": [
+    "Indian citizen",
+    "Enrolled in Class 11 or 12, General Graduation, Professional Graduation/Postgraduation, Diploma/Polytechnic, or ITI course",
+    "Minimum 60% marks for Class 11–12 and General Graduation/Diploma/ITI",
+    "Minimum 80% marks for specialised professional disciplines",
+    "Annual family income not exceeding ₹2,50,000",
+    "Studying in a recognised institution in India",
+    "Children of Tata Capital or Buddy4Study employees are not eligible"
+  ],
+  "documents": [
+    "Government-issued ID proof",
+    "Academic mark sheets of previous qualifying examination",
+    "Admission proof or fee receipt",
+    "Family income certificate or income proof",
+    "Bank account details",
+    "Passport-size photograph"
+  ],
+  "officialLink": "https://www.buddy4study.com",
+  "providerImage": ""
+},
+{
+  "id": "sch-sensodyne-ida-shining-star-2025-26",
+  "name": "Sensodyne IDA Shining Star Scholarship Programme 2025–26",
+  "provider": "Haleon India (in collaboration with Indian Dental Association & Buddy4Study)",
+  "category": "scholarship",
+  "deadline": "2026-01-31",
+  "amount": "₹50,000 per year for 4 years (total ₹2,00,000)",
+  "course": "Bachelor of Dental Surgery (BDS)",
+  "state": "India",
+  "incomeLimit": "₹8,00,000 per annum",
+  "description": "The Sensodyne IDA Shining Star Scholarship Programme 2025–26 is a CSR initiative by Haleon India to support meritorious yet financially constrained first-year BDS students studying in government or government-aided dental colleges across India. The scholarship provides long-term financial support to help students complete their dental education and cover essential academic and living expenses.",
+  "eligibility": [
+    "Indian citizen",
+    "First-year BDS student",
+    "Studying in a government or government-aided dental college",
+    "Government seat allotment in the college",
+    "Minimum 60% marks in the previous academic year or semester",
+    "Annual family income not exceeding ₹8,00,000",
+    "Not receiving any other scholarship",
+    "Children of employees of Haleon, Buddy4Study, or partner organisations are not eligible"
+  ],
+  "documents": [
+    "Passport-size photograph",
+    "Previous academic marksheet",
+    "Government-issued ID proof",
+    "Admission proof or fee receipt",
+    "Family income certificate or Income Tax Return",
+    "Bank account details of applicant or parent/guardian"
+  ],
+  "officialLink": "https://www.buddy4study.com",
+  "providerImage": ""
+},
+{
+  "id": "sch-focus-area-science-tech-summer-2026",
+  "name": "Focus Area Science & Technology Summer Fellowship 2026",
+  "provider": "Indian Academy of Sciences (IAS), Indian National Science Academy (INSA), National Academy of Sciences, India (NASI)",
+  "category": "fellowship",
+  "deadline": "2026-01-31",
+  "amount": "Summer research fellowship opportunity",
+  "course": "Science, Engineering, Medicine and allied disciplines",
+  "state": "India (North-Eastern and specified eligible regions)",
+  "incomeLimit": "",
+  "description": "The Focus Area Science & Technology Summer Fellowship 2026 is jointly offered by IAS, INSA, and NASI to provide short-term summer research exposure to students from North-Eastern and selected regions of India. The programme enables eligible undergraduate, postgraduate, integrated, and research students to work on focused research projects under the guidance of academies and host institutions in science, engineering, medicine, and allied fields.",
+  "eligibility": [
+    "Indian citizen",
+    "Student from North-Eastern states or other specified eligible regions",
+    "Currently pursuing eligible undergraduate, postgraduate, integrated, or research programs",
+    "Minimum 65% average marks in core subjects from Class 10 onwards"
+  ],
+  "documents": [
+    "Mark sheets from Class 10 to latest examination",
+    "Project proposal",
+    "Write-up on research interests",
+    "Contact details of a teacher for recommendation",
+    "Publications (if applicable)",
+    "Authorisation letter (for selected teacher applicants)"
+  ],
+  "officialLink": "https://webjapps.ias.ac.in",
+  "providerImage": ""
+},
+{
+"id": "sch-radboud-scholarship-2026-27",
+"name": "Radboud Scholarship Programme 2026–27",
+"provider": "Radboud University",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Tuition fee reduced to €2,695 per year + visa, residence permit, health & liability insurance",
+"course": "English-taught Master’s programmes",
+"state": "International (Netherlands)",
+"incomeLimit": "",
+"description": "The Radboud Scholarship Programme 2026–27 is a highly competitive scholarship for non-EU/non-EEA students admitted to English-taught Master’s programmes at Radboud University. The scholarship significantly reduces tuition fees and covers visa, residence permit, and insurance costs, supporting academically excellent international students pursuing postgraduate education in the Netherlands.",
+"eligibility": [
+"Non-EU or non-EEA passport holder",
+"Admitted to a full-time English-taught Master’s programme at Radboud University",
+"Bachelor’s degree obtained outside the Netherlands",
+"Meets English language proficiency requirements",
+"Eligible for a Dutch student visa",
+"No prior degree obtained in the Netherlands (exchange programs excluded)"
+],
+"documents": [
+"Valid passport",
+"Bachelor’s degree certificate and transcripts",
+"Admission letter from Radboud University",
+"English language proficiency test score",
+"Curriculum Vitae (CV)",
+"Two academic reference letters"
+],
+"officialLink": "[https://www.ru.nl](https://www.ru.nl)",
+"providerImage": ""
+},
+{
+"id": "sch-tata-capital-pankh-2025-26",
+"name": "Tata Capital Pankh Scholarship Program 2025–26",
+"provider": "Tata Capital Limited",
+"category": "scholarship",
+"deadline": "2026-01-31",
+"amount": "Up to 80% of tuition/course fees (₹10,000 to ₹1,00,000 depending on category)",
+"course": "Class 11–12, General Graduation, Professional Graduation, Diploma/Polytechnic, ITI",
+"state": "India",
+"incomeLimit": "₹2,50,000 per annum",
+"description": "The Tata Capital Pankh Scholarship Program 2025–26 is a CSR initiative by Tata Capital Limited to support meritorious students from economically weaker sections across India. The scholarship covers up to 80% of tuition or course fees for students studying in school, undergraduate, professional, diploma, polytechnic, or ITI programs, helping reduce financial barriers to education.",
+"eligibility": [
+"Indian national",
+"Studying in Class 11 or 12, graduation, professional degree, diploma, polytechnic or ITI",
+"Minimum 60% marks (80% for specialised professional disciplines)",
+"Annual family income not exceeding ₹2,50,000",
+"Enrolled in a recognised institution in India",
+"Not a child of Tata Capital or Buddy4Study employee"
+],
+"documents": [
+"Proof of identity",
+"Academic marksheets",
+"Admission proof or fee receipt",
+"Family income certificate",
+"Bank account details",
+"Passport-size photograph"
+],
+"officialLink": "[https://www.buddy4study.com](https://www.buddy4study.com)",
+"providerImage": ""
+},
+{
+  "id": "sch-apj-abdul-kalam-young-research-2025-26",
+  "name": "Dr. A. P. J. Abdul Kalam Young Research Fellowship 2025–26",
+  "provider": "TERRE Policy Center",
+  "category": "fellowship",
+  "deadline": "2026-01-31",
+  "amount": "₹10,000 to ₹25,000 fellowship amount with certificate",
+  "course": "Undergraduate, Postgraduate (MSc, MA, ME), Doctoral (PhD)",
+  "state": "India",
+  "incomeLimit": "",
+  "description": "A national-level young research fellowship offered by the TERRE Policy Center to recognize and support Indian students and researchers aged 18–25 who are pursuing or have completed undergraduate, postgraduate, or doctoral studies in environmental research and allied fields. The fellowship aims to promote impactful research and sustainable environmental initiatives.",
+  "eligibility": [
+    "Indian citizen",
+    "Age between 18 and 25 years as on 31 December 2025",
+    "Pursuing or completed undergraduate degree",
+    "Pursuing or completed postgraduate degree (MSc, MA, ME)",
+    "PhD student or graduate",
+    "Research work related to environmental studies or protection"
+  ],
+  "documents": [
+    "Age proof (Aadhaar / PAN / Voter ID)",
+    "Copy of research work or project",
+    "Marksheets and certificates of last qualifying examination",
+    "Caste certificate (if applicable)",
+    "Disability certificate (if applicable)"
+  ],
+  "officialLink": "https://terrepolicycentre.com",
+  "providerImage": ""
+}
 ]

@@ -1,4 +1,4 @@
-// VARIABLES
+// ================= VARIABLES =================
 $primary-indigo: #4338ca;
 $text-main: #0f172a;
 $text-body: #334155;
@@ -6,15 +6,17 @@ $bg-hero: #f8fafc;
 $bg-white: #ffffff;
 $slate-200: #e2e8f0;
 
+// ================= CONTAINER =================
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
+// ================= HERO =================
 .hero {
   background-color: $bg-hero;
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 4rem;
   overflow: hidden;
 
   .hero-wrapper {
@@ -24,17 +26,17 @@ $slate-200: #e2e8f0;
     gap: 2rem;
 
     @media (max-width: 960px) {
-      flex-direction: column; 
+      flex-direction: column;
       text-align: center;
-      gap: 3rem; 
+      gap: 3rem;
     }
   }
 
-  // --- LEFT COLUMN ---
+  // ================= LEFT COLUMN =================
   .hero-text {
     flex: 1;
     max-width: 580px;
-    z-index: 10; 
+    z-index: 10;
 
     .badge-new {
       display: inline-block;
@@ -53,7 +55,10 @@ $slate-200: #e2e8f0;
       color: $text-main;
       line-height: 1.1;
       margin-bottom: 1.5rem;
-      @media (max-width: 768px) { font-size: 2.5rem; } 
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
     }
 
     .hero-subtitle {
@@ -61,14 +66,18 @@ $slate-200: #e2e8f0;
       color: $text-body;
       line-height: 1.6;
       margin-bottom: 2.5rem;
-      
-      strong { color: #0f172a; font-weight: 600; }
+
+      strong {
+        color: $text-main;
+        font-weight: 600;
+      }
     }
 
-    // --- NEW SEARCH BAR STYLES ---
+    // ================= SEARCH BAR =================
     .hero-search-bar {
       background: $bg-white;
-      padding: 6px;
+      height: 56px;
+      padding: 0 8px;
       border-radius: 100px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       margin-bottom: 2rem;
@@ -77,8 +86,12 @@ $slate-200: #e2e8f0;
       align-items: center;
       max-width: 550px;
       transition: transform 0.2s, box-shadow 0.2s;
-      
-      @media (max-width: 960px) { margin: 0 auto 2rem auto; }
+
+      @media (max-width: 960px) {
+        margin: 0 auto 2rem;
+        width: 100%;
+        max-width: 100%;
+      }
 
       &:focus-within {
         border-color: $primary-indigo;
@@ -86,88 +99,155 @@ $slate-200: #e2e8f0;
         transform: translateY(-2px);
       }
 
-      // 1. DROPDOWN
+      // -------- CATEGORY DROPDOWN --------
       .select-wrapper {
         position: relative;
-        padding-left: 0.5rem;
-        
-        select {
-          appearance: none;
-          background: transparent;
-          border: none;
+        cursor: pointer;
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+
+        // ✅ DESKTOP: FULL TEXT (NO DOTS)
+        .selected {
           font-weight: 600;
-          color: $text-main;
-          font-size: 0.95rem;
-          padding: 12px 24px 12px 12px;
-          cursor: pointer;
-          outline: none;
-          font-family: inherit;
+          padding: 0 28px 0 12px;
+          line-height: 44px;
         }
 
         .chevron {
           position: absolute;
-          right: 4px;
+          right: 8px;
           top: 50%;
           transform: translateY(-50%);
           pointer-events: none;
           color: $primary-indigo;
         }
-      }
 
-      .divider {
-        width: 1px; height: 24px; background-color: $slate-200; margin: 0 8px;
-      }
+        .dropdown {
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 200px;
+          max-height: 180px;
+          overflow-y: auto;
+          background: $bg-white;
+          border-radius: 12px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          z-index: 999;
 
-      // 2. INPUT
-      .input-wrapper {
-        flex: 1;
-        display: flex; align-items: center; gap: 8px;
+          li {
+            padding: 12px 14px;
+            font-weight: 500;
+            cursor: pointer;
 
-        .search-icon { color: #94a3b8; }
-
-        input {
-          width: 100%; border: none; outline: none;
-          font-size: 1rem; color: $text-main; background: transparent;
-          &::placeholder { color: #94a3b8; }
+            &:hover {
+              background: #eef2ff;
+            }
+          }
         }
       }
 
-      // 3. BUTTON
+      .divider {
+        width: 1px;
+        height: 24px;
+        background-color: $slate-200;
+        margin: 0 12px;
+      }
+
+      // -------- INPUT --------
+      .input-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+
+        .search-icon {
+          color: #94a3b8;
+          flex-shrink: 0;
+        }
+
+        input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          font-size: 1rem;
+          color: $text-main;
+          background: transparent;
+
+          &::placeholder {
+            color: #94a3b8;
+          }
+        }
+      }
+
+      // -------- SEARCH BUTTON --------
       .search-submit {
+        height: 44px;
         background: $primary-indigo;
-        color: white; border: none;
-        padding: 12px 28px; border-radius: 50px;
-        font-weight: 600; font-size: 1rem;
-        cursor: pointer; transition: all 0.2s;
-        
-        &:hover { background: darken($primary-indigo, 5%); }
+        color: white;
+        border: none;
+        padding: 0 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex-shrink: 0;
+
+        &:hover {
+          background: darken($primary-indigo, 5%);
+        }
+
+        &.icon-only {
+          padding: 0;
+          width: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            color: white;
+          }
+        }
       }
     }
 
-    // Trust Indicators
+    // ================= TRUST INDICATORS =================
     .trust-indicators {
-      display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+
       .indicator-item {
-        display: flex; align-items: center; gap: 8px;
-        font-size: 0.95rem; font-weight: 600; color: #475569;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #475569;
       }
-      .divider { color: #cbd5e1; }
-      @media (max-width: 960px) { justify-content: center; }
+
+      .divider {
+        color: #cbd5e1;
+      }
+
+      @media (max-width: 960px) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
   }
 
-  // --- RIGHT COLUMN ---
+  // ================= RIGHT COLUMN =================
   .hero-image-container {
     position: relative;
     flex: 1;
     display: flex;
     justify-content: center;
     min-height: 500px;
-    
-    // Reset Default styles
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
 
     .blob-layer {
       position: absolute;
@@ -180,7 +260,6 @@ $slate-200: #e2e8f0;
     }
 
     .blob-bg {
-      // Desktop Blob
       width: 120%;
       max-width: 600px;
       height: 65%;
@@ -199,40 +278,58 @@ $slate-200: #e2e8f0;
     }
 
     .hero-img {
-      // Desktop Image
       width: 115%;
       max-width: 680px;
       height: auto;
-      transform: translate(-80px, -30px); 
+      transform: translate(-80px, -30px);
     }
 
-    // ============================================
-    // MOBILE FIXES: Make image overflow the blob
-    // ============================================
+    // ================= MOBILE IMAGE FIX =================
     @media (max-width: 960px) {
-      min-height: 350px; 
+      min-height: 350px;
       margin-top: 2rem;
-      align-items: flex-end; // Helps align image to bottom
+      align-items: flex-end;
 
-      .blob-bg { 
-        // Blob stays moderate size
-        width: 280px; 
-        height: 240px; 
-        transform: translate(0, 40px); // Push blob down
+      .blob-bg {
+        width: 280px;
+        height: 240px;
+        transform: translate(0, 40px);
       }
-      
+
       .student-layer {
-        align-items: flex-end; // Align bottom
+        align-items: flex-end;
       }
 
-      .hero-img { 
-        // FORCE LARGE SIZE
-        width: auto !important; 
-        height: 300px !important; // Fixed large height for mobile
-        max-width: none !important; // Allow overflow
-        
-        // Pull UP to create overlap
-        transform: translate(40, -20px) !important; 
+      .hero-img {
+        width: auto !important;
+        height: 300px !important;
+        max-width: none !important;
+        transform: translate(-75px, -45px) !important;
+      }
+    }
+  }
+}
+
+// ================= MOBILE UX FIXES =================
+@media (max-width: 960px) {
+  .hero-search-bar {
+
+    // ❌ remove input search icon on mobile
+    .search-icon {
+      display: none;
+    }
+
+    .input-wrapper {
+      gap: 0;
+    }
+
+    // ✅ MOBILE-ONLY ELLIPSIS
+    .select-wrapper {
+      .selected {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 110px;
       }
     }
   }

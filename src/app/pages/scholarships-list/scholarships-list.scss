@@ -48,7 +48,7 @@ $white: #ffffff;
     border: none;
     color: $indigo;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -179,9 +179,9 @@ $white: #ffffff;
   .checkbox-row {
     display: flex;
     align-items: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.05rem;
     cursor: pointer;
-    padding: 4px 0;
+    padding: 2px 0;
     
     input { display: none; }
 
@@ -195,6 +195,7 @@ $white: #ffffff;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      transition: all 0.2s;
     }
 
     input:checked + .custom-checkbox {
@@ -224,6 +225,13 @@ $white: #ffffff;
     margin-bottom: 1.5rem;
     @media (max-width: 768px) { font-size: 1.5rem; margin-bottom: 1rem; }
   }
+  
+  .results-meta {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: $slate-600;
+    strong { color: $slate-900; }
+  }
 }
 
 .pro-search-bar {
@@ -233,7 +241,7 @@ $white: #ffffff;
   border: 1px solid $slate-200;
   border-radius: 8px;
   padding: 6px;
-  margin-bottom: 1rem; // Reduced margin since button is below now
+  margin-bottom: 1rem; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 
   &:focus-within {
@@ -274,4 +282,84 @@ $white: #ffffff;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+// --- LOADING & EMPTY STATES ---
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  grid-column: 1 / -1; // Span full width
+  
+  p { margin-top: 1rem; color: $slate-600; }
+}
+
+.empty-state button {
+  margin-top: 1rem;
+  background: white;
+  border: 1px solid $slate-200;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover { border-color: $indigo; color: $indigo; }
+}
+
+// --- PAGINATION STYLES (NEW) ---
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+
+  .page-numbers {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .page-btn {
+    border: 1px solid $slate-200;
+    background: white;
+    color: $slate-600;
+    padding: 8px 16px;
+    border-radius: 50px; // Pill shape
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &:hover:not(:disabled) {
+      border-color: $indigo;
+      color: $indigo;
+      transform: translateY(-2px);
+    }
+
+    // Active State
+    &.active {
+      background-color: $indigo;
+      color: white;
+      border-color: $indigo;
+      box-shadow: 0 4px 6px -1px rgba(67, 56, 202, 0.4);
+    }
+
+    // Disabled State
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: #f1f5f9;
+      transform: none;
+    }
+    
+    &.prev, &.next { font-weight: 700; }
+  }
+}
+
+// Mobile tweak for pagination
+@media (max-width: 600px) {
+  .pagination-container {
+    gap: 0.5rem;
+    .page-btn { padding: 6px 12px; font-size: 0.8rem; }
+  }
 }

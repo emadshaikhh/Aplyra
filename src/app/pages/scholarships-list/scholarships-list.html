@@ -47,7 +47,7 @@
         </div>
 
         <div class="results-meta">
-          <span>Showing <strong>{{ filteredScholarships.length }}</strong> opportunities</span>
+          <span>Showing <strong>{{ allScholarships.length }}</strong> opportunities</span>
         </div>
 
         <div class="scholarships-grid">
@@ -56,20 +56,44 @@
             <p>Finding opportunities...</p>
           </div>
 
-          <div *ngIf="!isLoading && filteredScholarships.length === 0" class="empty-state">
+          <div *ngIf="!isLoading && allScholarships.length === 0" class="empty-state">
             <p>No opportunities found matching your criteria.</p>
             <button (click)="resetFilters()">Clear Filters</button>
           </div>
 
           <app-scholarship-card
-            *ngFor="let scholarship of filteredScholarships"
+            *ngFor="let scholarship of displayedScholarships"
             [scholarship]="scholarship"
             [viewMode]="'grid'"
             [showCategory]="!filters.category">
           </app-scholarship-card>
         </div>
 
-      </main>
+        <div class="pagination-container" *ngIf="!isLoading && totalPages > 1">
+          
+          <button class="page-btn prev" 
+                  (click)="changePage(currentPage - 1)" 
+                  [disabled]="currentPage === 1">
+            Previous
+          </button>
+
+          <div class="page-numbers">
+            <button *ngFor="let page of pageNumbers" 
+                    class="page-btn number" 
+                    [class.active]="page === currentPage"
+                    (click)="changePage(page)">
+              {{ page }}
+            </button>
+          </div>
+
+          <button class="page-btn next" 
+                  (click)="changePage(currentPage + 1)" 
+                  [disabled]="currentPage === totalPages">
+            Next
+          </button>
+        
+        </div>
+        </main>
 
     </div> 
   </div>

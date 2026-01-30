@@ -1,4 +1,6 @@
-/* Global Styles */
+/* =========================================
+   1. GLOBAL & BRAND VARIABLES
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 * {
@@ -8,24 +10,49 @@
 }
 
 :root {
-  /* --- NEW BRAND IDENTITY: "Modern Growth" --- */
+  /* --- BRAND IDENTITY: "Modern Growth" --- */
   
-  /* Primary: Deep Indigo (Instead of Corporate Blue) */
+  /* Primary: Deep Indigo */
   --primary-blue: #4338ca;       /* Indigo-700 */
   --primary-blue-dark: #3730a3;  /* Indigo-800 */
-  --primary-blue-light: #6366f1; /* Indigo-500 (For gradients) */
+  --primary-blue-light: #6366f1; /* Indigo-500 */
 
-  /* Accent: Vibrant Mint (For Success/Money/Growth) */
+  /* Accent: Vibrant Mint */
   --secondary-green: #10b981;    /* Emerald-500 */
-  --secondary-mint: #d1fae5;     /* Emerald-100 (Backgrounds) */
+  --secondary-mint: #d1fae5;     /* Emerald-100 */
 
   /* Backgrounds */
   --bg-hero: #f8fafc;            /* Cool Slate White */
   --bg-white: #ffffff;
+  
+  /* Neutrals */
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  
+  /* Alerts */
+  --secondary-orange: #f59e0b;
+  --danger-red: #ef4444;
 
   /* Shapes */
-  --radius-pill: 50px;           /* For modern buttons */
-  --radius-card: 16px;           /* Softer cards */
+  --radius-pill: 50px;
+  --radius-card: 16px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --transition-base: 0.2s ease-in-out;
+  
+  /* Spacing Standard */
+  --spacing-sm: 0.25rem;
+  --spacing-md: 0.5rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
 }
 
 html {
@@ -38,13 +65,47 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: var(--gray-800);
-  background-color: #ffffff;
+  background-color: var(--bg-hero);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-// Typography
+/* =========================================
+   2. CUSTOM SCROLLBAR (Professional Look)
+   ========================================= */
+
+/* Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-400) transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;  /* Vertical width */
+  height: 10px; /* Horizontal height */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Keep track invisible for cleaner look */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-300); /* Subtle subtle gray by default */
+  border-radius: 20px;       /* Pill shape */
+  border: 3px solid transparent; /* Creates the "floating" effect */
+  background-clip: content-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-blue); /* Brand color on hover */
+}
+
+/* =========================================
+   3. TYPOGRAPHY
+   ========================================= */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -53,47 +114,34 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5rem;
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
+  @media (max-width: 768px) { font-size: 2rem; }
 }
 
 h2 {
   font-size: 2rem;
-  
-  @media (max-width: 768px) {
-    font-size: 1.75rem;
-  }
+  @media (max-width: 768px) { font-size: 1.75rem; }
 }
 
 h3 {
   font-size: 1.5rem;
-  
-  @media (max-width: 768px) {
-    font-size: 1.25rem;
-  }
+  @media (max-width: 768px) { font-size: 1.25rem; }
 }
 
 p {
   margin-bottom: 1rem;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+  &:last-child { margin-bottom: 0; }
 }
 
 a {
   color: var(--primary-blue);
   text-decoration: none;
   transition: color var(--transition-base);
-  
-  &:hover {
-    color: var(--primary-blue-dark);
-  }
+  &:hover { color: var(--primary-blue-dark); }
 }
 
-// Utility Classes
+/* =========================================
+   4. UTILITY CLASSES
+   ========================================= */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -101,27 +149,17 @@ a {
   padding: 0 1rem;
 }
 
-.text-center {
-  text-align: center;
-}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-// Button Styles
+/* =========================================
+   5. BUTTON STYLES
+   ========================================= */
 button {
   font-family: inherit;
   cursor: pointer;
-  
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
+  &:disabled { cursor: not-allowed; opacity: 0.6; }
 }
 
 .btn {
@@ -144,39 +182,33 @@ button {
 .btn-primary {
   background: var(--primary-blue);
   color: white;
-  
   &:hover:not(:disabled) {
     background: var(--primary-blue-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
   }
-  
-  &:active:not(:disabled) {
-    transform: translateY(0);
-  }
+  &:active:not(:disabled) { transform: translateY(0); }
 }
 
 .btn-secondary {
   background: var(--gray-200);
   color: var(--gray-800);
-  
-  &:hover:not(:disabled) {
-    background: var(--gray-300);
-  }
+  &:hover:not(:disabled) { background: var(--gray-300); }
 }
 
 .btn-outline {
   background: transparent;
   color: var(--primary-blue);
   border: 2px solid var(--primary-blue);
-  
   &:hover:not(:disabled) {
     background: var(--primary-blue);
     color: white;
   }
 }
 
-// Input Styles
+/* =========================================
+   6. INPUT STYLES
+   ========================================= */
 input, select, textarea {
   font-family: inherit;
   font-size: 1rem;
@@ -197,19 +229,13 @@ textarea {
     outline: none;
     border-color: var(--primary-blue);
   }
-  
-  &::placeholder {
-    color: var(--gray-400);
-  }
+  &::placeholder { color: var(--gray-400); }
 }
 
-// Loading Spinner
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* =========================================
+   7. LOADING SPINNER
+   ========================================= */
+@keyframes spin { to { transform: rotate(360deg); } }
 .spinner {
   width: 40px;
   height: 40px;
@@ -219,10 +245,12 @@ textarea {
   animation: spin 1s linear infinite;
 }
 
-// Card Styles
+/* =========================================
+   8. CARD STYLES
+   ========================================= */
 .card {
   background: white;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-card);
   border: 2px solid var(--gray-200);
   padding: 1.5rem;
   transition: all var(--transition-base);
@@ -233,7 +261,9 @@ textarea {
   }
 }
 
-// Badge Styles
+/* =========================================
+   9. BADGE STYLES
+   ========================================= */
 .badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -242,40 +272,25 @@ textarea {
   border-radius: var(--radius-full);
 }
 
-.badge-primary {
-  background: var(--primary-blue);
-  color: white;
-}
+.badge-primary { background: var(--primary-blue); color: white; }
+.badge-success { background: var(--secondary-green); color: white; }
+.badge-warning { background: var(--secondary-orange); color: white; }
+.badge-danger { background: var(--danger-red); color: white; }
 
-.badge-success {
-  background: var(--secondary-green);
-  color: white;
-}
-
-.badge-warning {
-  background: var(--secondary-orange);
-  color: white;
-}
-
-.badge-danger {
-  background: var(--danger-red);
-  color: white;
-}
-
-// Responsive Utilities
+/* =========================================
+   10. RESPONSIVE UTILITIES
+   ========================================= */
 .hide-mobile {
-  @media (max-width: 768px) {
-    display: none !important;
-  }
+  @media (max-width: 768px) { display: none !important; }
 }
 
 .hide-desktop {
-  @media (min-width: 769px) {
-    display: none !important;
-  }
+  @media (min-width: 769px) { display: none !important; }
 }
 
-// Spacing Utilities
+/* =========================================
+   11. SPACING UTILITIES
+   ========================================= */
 .mt-1 { margin-top: var(--spacing-sm); }
 .mt-2 { margin-top: var(--spacing-md); }
 .mt-3 { margin-top: var(--spacing-lg); }
@@ -291,96 +306,42 @@ textarea {
 .p-3 { padding: var(--spacing-lg); }
 .p-4 { padding: var(--spacing-xl); }
 
-// Accessibility
+/* =========================================
+   12. ACCESSIBILITY
+   ========================================= */
 .sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
 }
 
-// Focus Visible (for keyboard navigation)
+/* Focus Visible */
 *:focus-visible {
   outline: 2px solid var(--primary-blue);
   outline-offset: 2px;
 }
 
-// Selection Color
-::selection {
-  background: var(--primary-blue);
-  color: white;
-}
+/* Selection Color */
+::selection { background: var(--primary-blue); color: white; }
+::-moz-selection { background: var(--primary-blue); color: white; }
 
-::-moz-selection {
-  background: var(--primary-blue);
-  color: white;
-}
-
-// Scrollbar Styles (WebKit browsers)
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--gray-100);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gray-400);
-  border-radius: var(--radius-md);
-  
-  &:hover {
-    background: var(--gray-500);
-  }
-}
-
-// Print Styles
+/* =========================================
+   13. PRINT & ANIMATIONS
+   ========================================= */
 @media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
+  .no-print { display: none !important; }
+  a[href]:after { content: " (" attr(href) ")"; }
 }
 
-// Animation Classes
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.fade-in { animation: fadeIn 0.5s ease-in-out; }
+.slide-up { animation: slideUp 0.5s ease-in-out; }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp 0.5s ease-in-out;
-}
-
-// Grid Utilities
+/* =========================================
+   14. GRID & FLEX UTILITIES
+   ========================================= */
 .grid {
   display: grid;
   gap: 1rem;
@@ -388,81 +349,77 @@ textarea {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, 1fr);
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
 }
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, 1fr);
-  
-  @media (max-width: 968px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @media (max-width: 568px) {
-    grid-template-columns: 1fr;
-  }
+  @media (max-width: 968px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 568px) { grid-template-columns: 1fr; }
 }
 
-// Flexbox Utilities
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
+/* Flexbox */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.flex-wrap { flex-wrap: wrap; }
 
 .gap-1 { gap: var(--spacing-sm); }
 .gap-2 { gap: var(--spacing-md); }
 .gap-3 { gap: var(--spacing-lg); }
 .gap-4 { gap: var(--spacing-xl); }
 
-// Error & Success Messages
+/* =========================================
+   15. ALERTS
+   ========================================= */
 .alert {
   padding: 1rem 1.5rem;
   border-radius: var(--radius-md);
   margin-bottom: 1rem;
   
-  &.alert-success {
-    background: #d1fae5;
-    color: #065f46;
-    border-left: 4px solid var(--secondary-green);
+  &.alert-success { background: #d1fae5; color: #065f46; border-left: 4px solid var(--secondary-green); }
+  &.alert-error { background: #fee2e2; color: #991b1b; border-left: 4px solid var(--danger-red); }
+  &.alert-warning { background: #fef3c7; color: #92400e; border-left: 4px solid var(--secondary-orange); }
+  &.alert-info { background: #dbeafe; color: #1e40af; border-left: 4px solid var(--primary-blue); }
+}
+
+/* =========================================
+   16. MOBILE FOCUS OPTIMIZATIONS
+   ========================================= */
+
+/* A. Tap Highlight Removal (Makes web apps feel like Native Apps) */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* B. iPhone Notch / Home Bar Support */
+body {
+  /* Adds padding so content isn't hidden behind the iPhone X home bar */
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* C. Better Mobile Card Spacing & Grid Force */
+@media (max-width: 768px) {
+  /* Force 1 Column on Mobile for 3-col grids (Fixes squished layout) */
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Adjust Card Padding for small screens */
+  .card {
+    padding: 1.25rem; 
   }
   
-  &.alert-error {
-    background: #fee2e2;
-    color: #991b1b;
-    border-left: 4px solid var(--danger-red);
+  /* Prevent horizontal scroll */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-x: hidden;
   }
   
-  &.alert-warning {
-    background: #fef3c7;
-    color: #92400e;
-    border-left: 4px solid var(--secondary-orange);
-  }
-  
-  &.alert-info {
-    background: #dbeafe;
-    color: #1e40af;
-    border-left: 4px solid var(--primary-blue);
-  }
+  /* Fix giant headings on small phones */
+  h1 { font-size: 1.75rem; }
 }

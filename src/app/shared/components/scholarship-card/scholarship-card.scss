@@ -35,11 +35,10 @@ $bg-grey: #f8fafc;
 .card-header {
   margin-bottom: 1rem;
 
-  // REMOVED: .header-badges styles
-
   .header-main {
     display: flex;
-    align-items: center;
+    // FIXED: Align start prevents logo from centering awkwardly on long titles
+    align-items: flex-start; 
     gap: 1rem;
     margin-bottom: 0.5rem;
 
@@ -55,19 +54,12 @@ $bg-grey: #f8fafc;
       align-items: center;
       justify-content: center;
       margin-right: 12px;
-      
-      // ADDED: Smooth transition for the hover effect
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-      // HOVER STATE FOR CONTAINER
       &:hover {
         border-color: $indigo;
         box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.1);
-
-        // HOVER EFFECT FOR IMAGE (Subtle Scale)
-        img.provider-logo-img {
-          transform: scale(1.1);
-        }
+        img.provider-logo-img { transform: scale(1.1); }
       }
 
       img.provider-logo-img {
@@ -76,7 +68,6 @@ $bg-grey: #f8fafc;
         object-fit: contain !important;
         padding: 4px;
         display: block;
-        // ADDED: Smooth transition for image scale
         transition: transform 0.3s ease;
       }
 
@@ -90,14 +81,31 @@ $bg-grey: #f8fafc;
 
     .title-section {
       flex: 1;
-      min-width: 0; 
+      min-width: 0; // Essential for text truncation to work
 
       .provider-name {
         display: block;
         font-size: 0.85rem;
         color: #64748b;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      // --- FIXED: Title styles moved HERE (Inside Header) ---
+      .title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: $slate-900;
+        line-height: 1.4;
+        
+        // --- THE HEIGHT LOCK ---
+        // Forces title to be exactly 2 lines tall, even if text is short
+        height: 2.8em; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
       }
@@ -109,22 +117,14 @@ $bg-grey: #f8fafc;
 .card-body {
   flex: 1;
   margin-bottom: 1.5rem;
+  overflow: hidden; 
 
-  .title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: $slate-900;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+  // NOTE: .title was removed from here because it lives in header now
 
   .meta-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // FIXED: minmax prevents content from pushing grid wider
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
     gap: 1rem;
     padding-top: 1rem;
     border-top: 1px solid $slate-100;
@@ -132,15 +132,24 @@ $bg-grey: #f8fafc;
     .meta-item {
       display: flex;
       flex-direction: column;
+      overflow: hidden; 
       
-      .label { font-size: 0.75rem; color: #94a3b8; margin-bottom: 2px; }
-      .value { 
+      .label { 
         font-size: 0.75rem; 
+        color: #94a3b8; 
+        margin-bottom: 2px; 
+      }
+      
+      .value { 
+        font-size: 0.8rem; 
         font-weight: 600; 
         color: $slate-900; 
+        
+        // FIXED: Force single line truncation
         white-space: nowrap; 
         overflow: hidden; 
         text-overflow: ellipsis; 
+        display: block;
       }
       
       &.amount .value { color: $indigo; }

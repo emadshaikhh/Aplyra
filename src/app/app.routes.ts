@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home';
 import { ListComponent } from './pages/scholarships-list/scholarships-list';
 import { ScholarshipDetailComponent } from './pages/scholarship-detail/scholarship-detail';
 import { AboutComponent } from './pages/about/about';
+import { ContactComponent } from './pages/contact/contact.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 export const routes: Routes = [
@@ -50,6 +51,11 @@ export const routes: Routes = [
     path: 'privacy',
     component: PrivacyComponent,
     title: 'Privacy Policy - Aplyra'
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: 'Contact - Aplyra'
   },
   {
     path: '**',
