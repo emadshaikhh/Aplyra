@@ -1,146 +1,128 @@
-<div class="scholarship-detail">
+<div class="page-wrapper">
+  
   <div class="container">
 
-    <!-- Loading State -->
-    <div *ngIf="isLoading" class="loading">
+    <div *ngIf="isLoading" class="loading-state">
       <div class="spinner"></div>
       <p>Loading details...</p>
     </div>
 
-    <!-- Not Found State -->
-    <div *ngIf="notFound && !isLoading" class="not-found">
-      <div class="not-found-icon">😕</div>
+    <div *ngIf="!isLoading && notFound" class="error-state">
+      <div class="icon-box error">
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+      </div>
       <h2>Opportunity Not Found</h2>
-      <p>The opportunity you're looking for doesn't exist or has been removed.</p>
-      <button class="back-btn" (click)="goBack()">
-        ← Back to Scholarships
-      </button>
+      <p>This opportunity may have expired or been removed.</p>
+      <button class="back-btn" (click)="goBack()">Back to List</button>
     </div>
 
-    <!-- Scholarship Detail -->
-    <div *ngIf="scholarship && !isLoading" class="detail-content">
+    <div *ngIf="!isLoading && !notFound && scholarship" class="content-wrapper">
       
-      <!-- Back Button -->
-      <button class="back-link" (click)="goBack()">
-        ← Back to All Opportunities
-      </button>
-
-      <!-- Header Section -->
-      <div class="detail-header">
-        <div class="header-main">
-          <span 
-            class="category-badge" 
-            [style.background-color]="getCategoryColor(scholarship.category)">
-            {{ getCategoryLabel(scholarship.category) }}
-          </span>
-          
-          <h1 class="scholarship-title">{{ scholarship.name }}</h1>
-          <p class="provider">
-            <span class="provider-icon">🏛️</span>
-            {{ scholarship.provider }}
-          </p>
-        </div>
-
-        <div class="header-sidebar">
-          <div class="info-card amount-card">
-            <div class="info-label">Amount</div>
-            <div class="info-value">{{ scholarship.amount }}</div>
-          </div>
-          
-          <div class="info-card deadline-card" [class.deadline-passed]="isDeadlinePassed()">
-            <div class="info-label">Deadline</div>
-            <div class="info-value">{{ formatDeadline(scholarship.deadline) }}</div>
-            <div *ngIf="!isDeadlinePassed() && getDaysUntilDeadline() <= 30" class="deadline-warning">
-              ⚠️ {{ getDaysUntilDeadline() }} days left
-            </div>
-            <div *ngIf="isDeadlinePassed()" class="deadline-passed-text">
-              Deadline has passed
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quick Info Grid -->
-      <div class="quick-info">
-        <div class="quick-info-item">
-          <span class="info-icon">🎓</span>
-          <div class="info-content">
-            <div class="info-title">Course Level</div>
-            <div class="info-text">{{ scholarship.course }}</div>
-          </div>
-        </div>
-        
-        <div class="quick-info-item">
-          <span class="info-icon">📍</span>
-          <div class="info-content">
-            <div class="info-title">State</div>
-            <div class="info-text">{{ scholarship.state }}</div>
-          </div>
-        </div>
-        
-        <div class="quick-info-item">
-          <span class="info-icon">💵</span>
-          <div class="info-content">
-            <div class="info-title">Income Limit</div>
-            <div class="info-text">{{ scholarship.incomeLimit }}</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Description Section -->
-      <section class="detail-section">
-        <h2 class="section-title">About This Opportunity</h2>
-        <p class="description-text">{{ scholarship.description }}</p>
-      </section>
-
-      <!-- Eligibility Section -->
-      <section class="detail-section">
-        <h2 class="section-title">Eligibility Criteria</h2>
-        <ul class="criteria-list">
-          <li *ngFor="let criterion of scholarship.eligibility">
-            <span class="check-icon">✓</span>
-            {{ criterion }}
-          </li>
-        </ul>
-      </section>
-
-      <!-- Documents Section -->
-      <section class="detail-section">
-        <h2 class="section-title">Required Documents</h2>
-        <div class="documents-grid">
-          <div class="document-item" *ngFor="let document of scholarship.documents">
-            <span class="document-icon">📄</span>
-            <span class="document-name">{{ document }}</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Important Notice -->
-      <div class="notice-box">
-        <div class="notice-icon">ℹ️</div>
-        <div class="notice-content">
-          <h3>Important Information</h3>
-          <p>
-            Aplyra is a discovery platform. We do not accept applications directly. 
-            You will be redirected to the official provider's website to complete your application. 
-            Please verify all information on the official site before applying.
-          </p>
-        </div>
-      </div>
-
-      <!-- Apply Button -->
-      <div class="apply-section">
-        <button 
-          class="apply-btn" 
-          (click)="applyNow()"
-          [disabled]="isDeadlinePassed()">
-          <span *ngIf="!isDeadlinePassed()">Apply on Official Website →</span>
-          <span *ngIf="isDeadlinePassed()">Deadline Passed</span>
+      <div class="top-bar">
+        <button class="back-link" (click)="goBack()">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          Back to Opportunities
         </button>
-        <p class="apply-note">You will be redirected to {{ scholarship.provider }}'s official website</p>
+      </div>
+
+      <div class="hero-header">
+        <div class="hero-content">
+          <div class="logo-box">
+             <img *ngIf="scholarship.providerImage" 
+                  [src]="scholarship.providerImage" 
+                  [alt]="scholarship.provider">
+             
+             <div *ngIf="!scholarship.providerImage" class="initial-fallback">
+                {{ scholarship.provider.charAt(0) }}
+             </div>
+          </div>
+          
+          <div class="text-content">
+            <div class="badges">
+              <span class="category-pill">{{ getCategoryLabel(scholarship.category) }}</span>
+              <span class="deadline-pill" [class.urgent]="!isDeadlinePassed() && getDaysUntilDeadline() <= 30">
+                {{ isDeadlinePassed() ? 'Closed' : getDaysUntilDeadline() + ' Days Left' }}
+              </span>
+            </div>
+            <h1 class="title">{{ scholarship.name }}</h1>
+            <p class="provider">by {{ scholarship.provider }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        
+        <main class="main-column">
+          
+          <div class="highlights-row">
+            <div class="highlight-item">
+              <span class="label">Course Level</span>
+              <span class="value">{{ scholarship.course }}</span>
+            </div>
+            <div class="highlight-item">
+              <span class="label">State</span>
+              <span class="value">{{ scholarship.state }}</span>
+            </div>
+            <div class="highlight-item">
+              <span class="label">Income Limit</span>
+              <span class="value">{{ scholarship.incomeLimit }}</span>
+            </div>
+          </div>
+
+          <section class="info-section">
+            <h3>About the Program</h3>
+            <p>{{ scholarship.description }}</p>
+          </section>
+
+          <section class="info-section">
+            <h3>Eligibility Criteria</h3>
+            <ul class="criteria-list">
+              <li *ngFor="let item of scholarship.eligibility">
+                <svg class="check-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="info-section">
+            <h3>Required Documents</h3>
+            <div class="docs-grid">
+              <div class="doc-card" *ngFor="let doc of scholarship.documents">
+                <svg class="doc-icon" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                <span>{{ doc }}</span>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <aside class="sidebar-column">
+          <div class="action-card">
+            <div class="amount-box">
+              <span class="label">Award Amount</span>
+              <span class="amount">{{ scholarship.amount }}</span>
+            </div>
+            
+            <div class="deadline-box">
+              <span class="label">Deadline</span>
+              <span class="date">{{ formatDeadline(scholarship.deadline) }}</span>
+            </div>
+
+            <hr class="divider">
+
+            <div class="notice">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <p>Applications are submitted on the official website.</p>
+            </div>
+
+            <button class="apply-btn" (click)="applyNow()" [disabled]="isDeadlinePassed()">
+              {{ isDeadlinePassed() ? 'Deadline Passed' : 'Apply Now' }}
+              <svg *ngIf="!isDeadlinePassed()" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </button>
+          </div>
+        </aside>
+
       </div>
 
     </div>
-
   </div>
 </div>

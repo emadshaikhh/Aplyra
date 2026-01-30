@@ -1,0 +1,90 @@
+// VARIABLES
+$text-main: #0f172a;
+$text-body: #334155;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.trust-section {
+  background-color: #f8fafc;
+  padding: 5rem 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+
+  // Header
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3.5rem auto;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: $text-main;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: $text-body;
+      line-height: 1.6;
+    }
+  }
+
+  // Grid
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  // Feature Card
+  .feature-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      border-color: rgba(67, 56, 202, 0.3);
+    }
+
+    // --- COLORFUL ICONS ---
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      
+      svg { width: 28px; height: 28px; }
+
+      &.icon-purple { background: #e0e7ff; color: #4338ca; }
+      &.icon-green { background: #dcfce7; color: #15803d; }
+      &.icon-blue { background: #dbeafe; color: #1e40af; }
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: $text-main;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: $text-body;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+}

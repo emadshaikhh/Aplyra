@@ -1,82 +1,58 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { DataService } from './data.service';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
 import { Scholarship, ScholarshipFilters } from './models/scholarship.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScholarshipService {
-  constructor(private dataService: DataService) {}
 
-  getAllScholarships(): Observable<Scholarship[]> {
-    return this.dataService.getScholarships();
-  }
+  constructor(private http: HttpClient) {}
 
-  getScholarshipById(id: string): Observable<Scholarship | undefined> {
-    return this.dataService.getScholarships().pipe(
-      map(scholarships => scholarships.find(s => s.id === id))
-    );
-  }
+  // 1. SEARCH FUNCTION (List Page)
+  searchScholarships(filters: ScholarshipFilters, type: 'scholarships' | 'internships' | 'schemes'): Observable<Scholarship[]> {
+    
+    let jsonFile = 'assets/data/scholarships.json';
+    if (type === 'internships') {
+      jsonFile = 'assets/data/internships.json';
+    } else if (type === 'schemes') {
+      jsonFile = 'assets/data/schemes.json';
+    }
 
-  searchScholarships(filters: ScholarshipFilters): Observable<Scholarship[]> {
-    return this.dataService.getScholarships().pipe(
-      map(scholarships => {
-        return scholarships.filter(scholarship => {
-          
-          // 1. Search Term (Name, Provider, or Description)
-          if (filters.searchTerm) {
-            const searchLower = filters.searchTerm.toLowerCase();
-            const matchesSearch = 
-              scholarship.name.toLowerCase().includes(searchLower) ||
-              scholarship.description.toLowerCase().includes(searchLower) ||
-              scholarship.provider.toLowerCase().includes(searchLower);
+    return this.http.get<Scholarship[]>(jsonFile).pipe(
+      map(data => {
+        return data.filter(item => {
+          const matchesSearch = !filters.searchTerm || 
+            item.name.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
+            item.provider.toLowerCase().includes(filters.searchTerm.toLowerCase());
+
+          // Check if filters.course is defined and not empty
+          const matchesCourse = !filters.course || filters.course.length === 0 || 
+            filters.course.some(c => item.course.includes(c));
+
+          // Check if filters.state is defined and not empty
+          const matchesState = !filters.state || filters.state.length === 0 || 
+            filters.state.includes(item.state);
             
-            if (!matchesSearch) return false;
-          }
-
-          // 2. Category Filter (Single Select)
-          if (filters.category && scholarship.category !== filters.category) {
-            return false;
-          }
-
-          // 3. Course Filter (MULTI-SELECT)
-          // If user selected courses, only show if scholarship's course is in that list
-          if (filters.course && filters.course.length > 0) {
-            if (!filters.course.includes(scholarship.course)) {
-              return false;
-            }
-          }
-
-          // 4. State Filter (MULTI-SELECT with 'All India' logic)
-          // Show if state matches one of the selected states OR is 'All India'
-          if (filters.state && filters.state.length > 0) {
-            const isMatch = filters.state.includes(scholarship.state) || scholarship.state === 'All India';
-            if (!isMatch) return false;
-          }
-
-          return true;
+          return matchesSearch && matchesCourse && matchesState;
         });
       })
     );
   }
 
-  getUpcomingDeadlines(limit: number = 5): Observable<Scholarship[]> {
-    return this.dataService.getScholarships().pipe(
-      map(scholarships => {
-        const today = new Date();
-        return scholarships
-          .filter(s => new Date(s.deadline) >= today)
-          .sort((a, b) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime())
-          .slice(0, limit);
-      })
-    );
-  }
+  // 2. GET BY ID FUNCTION (Detail Page)
+  getScholarshipById(id: string, type: 'scholarships' | 'internships' | 'schemes'): Observable<Scholarship | undefined> {
+    
+    let jsonFile = 'assets/data/scholarships.json';
+    if (type === 'internships') {
+      jsonFile = 'assets/data/internships.json';
+    } else if (type === 'schemes') {
+      jsonFile = 'assets/data/schemes.json';
+    }
 
-  getScholarshipsByCategory(category: string): Observable<Scholarship[]> {
-    return this.dataService.getScholarships().pipe(
-      map(scholarships => scholarships.filter(s => s.category === category))
+    return this.http.get<Scholarship[]>(jsonFile).pipe(
+      map(items => items.find(item => item.id === id))
     );
   }
 }

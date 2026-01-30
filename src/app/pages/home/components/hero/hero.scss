@@ -1,0 +1,239 @@
+// VARIABLES
+$primary-indigo: #4338ca;
+$text-main: #0f172a;
+$text-body: #334155;
+$bg-hero: #f8fafc;
+$bg-white: #ffffff;
+$slate-200: #e2e8f0;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  background-color: $bg-hero;
+  padding: 2rem 0 4rem 0;
+  overflow: hidden;
+
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media (max-width: 960px) {
+      flex-direction: column; 
+      text-align: center;
+      gap: 3rem; 
+    }
+  }
+
+  // --- LEFT COLUMN ---
+  .hero-text {
+    flex: 1;
+    max-width: 580px;
+    z-index: 10; 
+
+    .badge-new {
+      display: inline-block;
+      background: #e0e7ff;
+      color: $primary-indigo;
+      padding: 6px 12px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: $text-main;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      @media (max-width: 768px) { font-size: 2.5rem; } 
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: $text-body;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      
+      strong { color: #0f172a; font-weight: 600; }
+    }
+
+    // --- NEW SEARCH BAR STYLES ---
+    .hero-search-bar {
+      background: $bg-white;
+      padding: 6px;
+      border-radius: 100px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+      border: 1px solid rgba(67, 56, 202, 0.1);
+      display: flex;
+      align-items: center;
+      max-width: 550px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      
+      @media (max-width: 960px) { margin: 0 auto 2rem auto; }
+
+      &:focus-within {
+        border-color: $primary-indigo;
+        box-shadow: 0 8px 30px rgba(67, 56, 202, 0.15);
+        transform: translateY(-2px);
+      }
+
+      // 1. DROPDOWN
+      .select-wrapper {
+        position: relative;
+        padding-left: 0.5rem;
+        
+        select {
+          appearance: none;
+          background: transparent;
+          border: none;
+          font-weight: 600;
+          color: $text-main;
+          font-size: 0.95rem;
+          padding: 12px 24px 12px 12px;
+          cursor: pointer;
+          outline: none;
+          font-family: inherit;
+        }
+
+        .chevron {
+          position: absolute;
+          right: 4px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          color: $primary-indigo;
+        }
+      }
+
+      .divider {
+        width: 1px; height: 24px; background-color: $slate-200; margin: 0 8px;
+      }
+
+      // 2. INPUT
+      .input-wrapper {
+        flex: 1;
+        display: flex; align-items: center; gap: 8px;
+
+        .search-icon { color: #94a3b8; }
+
+        input {
+          width: 100%; border: none; outline: none;
+          font-size: 1rem; color: $text-main; background: transparent;
+          &::placeholder { color: #94a3b8; }
+        }
+      }
+
+      // 3. BUTTON
+      .search-submit {
+        background: $primary-indigo;
+        color: white; border: none;
+        padding: 12px 28px; border-radius: 50px;
+        font-weight: 600; font-size: 1rem;
+        cursor: pointer; transition: all 0.2s;
+        
+        &:hover { background: darken($primary-indigo, 5%); }
+      }
+    }
+
+    // Trust Indicators
+    .trust-indicators {
+      display: flex; align-items: center; gap: 1.5rem; margin-top: 1rem;
+      .indicator-item {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 0.95rem; font-weight: 600; color: #475569;
+      }
+      .divider { color: #cbd5e1; }
+      @media (max-width: 960px) { justify-content: center; }
+    }
+  }
+
+  // --- RIGHT COLUMN ---
+  .hero-image-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    
+    // Reset Default styles
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+
+    .blob-layer {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .blob-bg {
+      // Desktop Blob
+      width: 120%;
+      max-width: 600px;
+      height: 65%;
+      background: #e0e7ff;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      transform: translate(40px, 0);
+    }
+
+    .student-layer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-img {
+      // Desktop Image
+      width: 115%;
+      max-width: 680px;
+      height: auto;
+      transform: translate(-80px, -30px); 
+    }
+
+    // ============================================
+    // MOBILE FIXES: Make image overflow the blob
+    // ============================================
+    @media (max-width: 960px) {
+      min-height: 350px; 
+      margin-top: 2rem;
+      align-items: flex-end; // Helps align image to bottom
+
+      .blob-bg { 
+        // Blob stays moderate size
+        width: 280px; 
+        height: 240px; 
+        transform: translate(0, 40px); // Push blob down
+      }
+      
+      .student-layer {
+        align-items: flex-end; // Align bottom
+      }
+
+      .hero-img { 
+        // FORCE LARGE SIZE
+        width: auto !important; 
+        height: 300px !important; // Fixed large height for mobile
+        max-width: none !important; // Allow overflow
+        
+        // Pull UP to create overlap
+        transform: translate(40, -20px) !important; 
+      }
+    }
+  }
+}

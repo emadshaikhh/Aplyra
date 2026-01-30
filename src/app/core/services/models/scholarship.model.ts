@@ -4,26 +4,18 @@ export interface Scholarship {
   id: string;
   name: string;
   provider: string;
-  category: ScholarshipCategory;
-  amount: string;
+  category: 'scholarship' | 'internship' | 'scheme';
   deadline: string;
-  
-  // Details
+  amount: string;
   course: string;
   state: string;
   incomeLimit: string;
-  
-  // Content
   description: string;
   eligibility: string[];
   documents: string[];
-  
-  // External
   officialLink: string;
-  
-  // Optional
-  tags?: string[];
-  providerLogo?: string;
+  // Add this new optional field:
+  providerImage?: string; 
 }
 
 export interface ScholarshipFilters {

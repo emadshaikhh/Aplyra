@@ -1,0 +1,18 @@
+[
+  {
+    "id": "schm-001",
+    "name": "PM Yasasvi Scheme",
+    "provider": "Ministry of Social Justice",
+    "category": "scheme",
+    "deadline": "2026-08-30",
+    "amount": "₹75,000 - ₹1,25,000",
+    "course": "Class 9-12",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "Scholarship scheme for OBC, EBC and DNT students.",
+    "eligibility": ["OBC/EBC/DNT category", "Family income below ₹2.5 Lakhs"],
+    "documents": ["Caste Certificate", "Income Certificate"],
+    "officialLink": "https://yet.nta.ac.in",
+    "providerImage": "assets/images/providers/moe-logo.png"
+  }
+]

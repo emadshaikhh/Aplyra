@@ -13,15 +13,11 @@
     "eligibility": [
       "Indian citizen",
       "Minimum 75% in Class 12",
-      "Family income below ₹8 lakhs per annum"
+      "Family income below ₹8 lakhs"
     ],
-    "documents": [
-      "Class 12 marksheet",
-      "Income certificate",
-      "Aadhaar card",
-      "Bank account details"
-    ],
-    "officialLink": "https://scholarships.gov.in"
+    "documents": ["Class 12 marksheet", "Income certificate", "Aadhaar card"],
+    "officialLink": "https://scholarships.gov.in",
+    "providerImage": "assets/images/providers/moe-logo.png"
   },
   {
     "id": "sch-002",
@@ -34,18 +30,10 @@
     "state": "All India",
     "incomeLimit": "₹2,50,000",
     "description": "Financial assistance for SC/ST students pursuing postgraduate studies.",
-    "eligibility": [
-      "Belongs to SC/ST category",
-      "Enrolled in postgraduate course",
-      "Family income below ₹2.5 lakhs"
-    ],
-    "documents": [
-      "Caste certificate",
-      "Income certificate",
-      "College admission proof",
-      "Previous year marksheet"
-    ],
-    "officialLink": "https://scholarships.gov.in"
+    "eligibility": ["Belongs to SC/ST category", "Enrolled in postgraduate course"],
+    "documents": ["Caste certificate", "Income certificate"],
+    "officialLink": "https://scholarships.gov.in",
+    "providerImage": "assets/images/providers/mosje-logo.png"
   },
   {
     "id": "sch-003",
@@ -58,42 +46,10 @@
     "state": "Jammu and Kashmir",
     "incomeLimit": "₹6,00,000",
     "description": "Scholarship for students from J&K pursuing undergraduate studies outside the state.",
-    "eligibility": [
-      "Domicile of Jammu and Kashmir",
-      "Studying outside J&K",
-      "Minimum 60% in Class 12"
-    ],
-    "documents": [
-      "Domicile certificate",
-      "Class 12 marksheet",
-      "College admission letter",
-      "Bank passbook"
-    ],
-    "officialLink": "https://aicte-india.org"
-  },
-  {
-    "id": "int-001",
-    "name": "Government of India Internship Programme",
-    "provider": "Ministry of Personnel",
-    "category": "internship",
-    "deadline": "2026-02-28",
-    "amount": "₹10,000/month",
-    "course": "Undergraduate",
-    "state": "All India",
-    "incomeLimit": "No Limit",
-    "description": "Paid internship program in various government ministries and departments.",
-    "eligibility": [
-      "Currently enrolled student",
-      "Minimum 60% aggregate",
-      "Good communication skills"
-    ],
-    "documents": [
-      "College ID card",
-      "Current semester marksheet",
-      "Resume",
-      "Recommendation letter"
-    ],
-    "officialLink": "https://internship.gov.in"
+    "eligibility": ["Domicile of J&K", "Studying outside J&K"],
+    "documents": ["Domicile certificate", "Class 12 marksheet"],
+    "officialLink": "https://aicte-india.org",
+    "providerImage": "assets/images/providers/moe-logo.png"
   },
   {
     "id": "sch-004",
@@ -106,18 +62,10 @@
     "state": "All India",
     "incomeLimit": "₹4,50,000",
     "description": "Merit-cum-means scholarship for students from economically weaker sections.",
-    "eligibility": [
-      "Family income below ₹4.5 lakhs",
-      "Secured admission through central allocation",
-      "Minimum 80% in Class 12"
-    ],
-    "documents": [
-      "Income certificate",
-      "Class 12 marksheet",
-      "College admission proof",
-      "Aadhaar card"
-    ],
-    "officialLink": "https://scholarships.gov.in"
+    "eligibility": ["Family income below ₹4.5 lakhs", "Minimum 80% in Class 12"],
+    "documents": ["Income certificate", "Class 12 marksheet"],
+    "officialLink": "https://scholarships.gov.in",
+    "providerImage": "assets/images/providers/moe-logo.png"
   },
   {
     "id": "sch-005",
@@ -129,17 +77,159 @@
     "course": "Postgraduate",
     "state": "All India",
     "incomeLimit": "₹2,00,000",
-    "description": "Scholarship for students from minority communities pursuing higher education.",
+    "description": "Scholarship for students from minority communities.",
+    "eligibility": ["Minority community", "Family income below ₹2 lakhs"],
+    "documents": ["Community certificate", "Income certificate"],
+    "officialLink": "https://scholarships.gov.in",
+    "providerImage": "assets/images/providers/mofa-logo.png"
+  },
+  {
+    "id": "sch-nsp-001",
+    "name": "Pre-Matric Scholarship for Minorities",
+    "provider": "Ministry of Minority Affairs",
+    "providerImage": "assets/images/providers/mofa-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-11-15",
+    "amount": "₹6,000 - ₹10,000/year",
+    "course": "Class 1 to 10",
+    "state": "All India",
+    "incomeLimit": "₹1,00,000",
+    "description": "Financial assistance for students belonging to minority communities (Muslim, Christian, Sikh, Buddhist, Jain, Parsi) studying in India.",
     "eligibility": [
-      "Belongs to notified minority community",
-      "Family income below ₹2 lakhs",
-      "Minimum 50% in graduation"
+      "Minimum 50% marks in previous final exam",
+      "Family income less than ₹1 Lakh",
+      "Must belong to a minority community"
     ],
     "documents": [
-      "Community certificate",
-      "Income certificate",
-      "Graduation certificate",
-      "Aadhaar card"
+      "Income Certificate",
+      "Community Certificate",
+      "Previous Year Marksheet",
+      "Bank Account Proof"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-nsp-002",
+    "name": "Post-Matric Scholarship for Minorities",
+    "provider": "Ministry of Minority Affairs",
+    "providerImage": "assets/images/providers/mofa-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-11-30",
+    "amount": "₹10,000 - ₹15,000/year",
+    "course": "Class 11 to Ph.D.",
+    "state": "All India",
+    "incomeLimit": "₹2,00,000",
+    "description": "Scholarship for minority students studying in Class 11, 12, ITI, Diploma, Graduation, and Post Graduation levels.",
+    "eligibility": [
+      "Minimum 50% marks in previous final exam",
+      "Family income less than ₹2 Lakhs",
+      "Admission in a recognized school/college"
+    ],
+    "documents": [
+      "Income Certificate",
+      "Community Certificate",
+      "Fee Receipt of current year",
+      "Aadhaar Card"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-nsp-003",
+    "name": "Merit Cum Means Scholarship (MCM)",
+    "provider": "Ministry of Minority Affairs",
+    "providerImage": "assets/images/providers/mofa-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-11-30",
+    "amount": "₹25,000 - ₹30,000/year",
+    "course": "Professional/Technical Courses",
+    "state": "All India",
+    "incomeLimit": "₹2,50,000",
+    "description": "For students pursuing technical or professional courses (like B.Tech, MBBS, MBA) from recognized institutions.",
+    "eligibility": [
+      "Minimum 50% marks in previous exam",
+      "Family income less than ₹2.5 Lakhs",
+      "Must be pursuing a technical/professional course"
+    ],
+    "documents": [
+      "Income Certificate",
+      "Self-Declaration of Minority",
+      "Mark sheets",
+      "Bank Passbook"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-nsp-004",
+    "name": "Top Class Education for SC Students",
+    "provider": "Ministry of Social Justice",
+    "providerImage": "assets/images/providers/mosje-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-10-31",
+    "amount": "Full Tuition + ₹3,000/month",
+    "course": "Undergraduate/Postgraduate",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "For SC students who have secured admission in notified top-class institutions (like IITs, NITs, IIMs).",
+    "eligibility": [
+      "Belong to Scheduled Caste (SC)",
+      "Admission in notified institutions",
+      "Family income below ₹8 Lakhs"
+    ],
+    "documents": [
+      "Caste Certificate",
+      "Income Certificate",
+      "Admission Proof (Bonafide)",
+      "Scorecard of Entrance Exam"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-nsp-005",
+    "name": "ISHAN UDAY Special Scholarship",
+    "provider": "UGC",
+    "providerImage": "assets/images/providers/ugc-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-10-31",
+    "amount": "₹5,400 - ₹7,800/month",
+    "course": "Undergraduate",
+    "state": "North East Region",
+    "incomeLimit": "₹4,50,000",
+    "description": "Special scholarship scheme for students having domicile of North Eastern Region (NER) states for general and professional courses.",
+    "eligibility": [
+      "Domicile of NER (Assam, Arunachal, Manipur, etc.)",
+      "Passed Class 12th in current year",
+      "Family income below ₹4.5 Lakhs"
+    ],
+    "documents": [
+      "Domicile Certificate of NER",
+      "Class 12 Marksheet",
+      "Income Certificate",
+      "Joining Report"
+    ],
+    "officialLink": "https://scholarships.gov.in"
+  },
+  {
+    "id": "sch-nsp-006",
+    "name": "AICTE Pragati Scholarship for Girls",
+    "provider": "AICTE",
+    "providerImage": "assets/images/providers/aicte-logo.png",
+    "category": "scholarship",
+    "deadline": "2026-12-31",
+    "amount": "₹50,000/year",
+    "course": "Diploma/Degree",
+    "state": "All India",
+    "incomeLimit": "₹8,00,000",
+    "description": "Scholarship exclusively for girl students admitted to first year of Diploma/Degree level course in an AICTE approved institution.",
+    "eligibility": [
+      "Maximum two girl children per family",
+      "Admitted to 1st year of Degree/Diploma",
+      "Family income less than ₹8 Lakhs"
+    ],
+    "documents": [
+      "Income Certificate",
+      "Admission Letter",
+      "Bonafide Certificate",
+      "Declaration by Parents"
     ],
     "officialLink": "https://scholarships.gov.in"
   }

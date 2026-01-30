@@ -4,6 +4,7 @@ $slate-900: #0f172a;
 $slate-600: #475569;
 $slate-200: #e2e8f0;
 $bg-grey: #f8fafc;
+$white: #ffffff;
 
 .page-wrapper {
   background-color: $bg-grey;
@@ -15,36 +16,78 @@ $bg-grey: #f8fafc;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  
-  /* THE LAYOUT MAGIC: Sidebar | Content */
-  display: grid;
-  grid-template-columns: 280px 1fr; // Sidebar fixed 280px, Content takes rest
-  gap: 2.5rem;
-  align-items: start; // Prevents sidebar from stretching height
+}
 
-  // Mobile: Stack them
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
+// --- MOBILE BACKDROP ---
+.mobile-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1999; // Very High Priority
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+  &.active {
+    display: block;
+    opacity: 1;
   }
 }
 
-// --- 1. SIDEBAR STYLES ---
-.sidebar {
-  background: white;
+// --- NEW TEXT FILTER BUTTON (Mobile Only) ---
+.mobile-filter-row {
+  display: none; // Hidden on Desktop
+  justify-content: flex-end; // Align to right
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) { display: flex; }
+
+  .text-filter-btn {
+    background: none;
+    border: none;
+    color: $indigo;
+    font-size: 1rem;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 0.5rem;
+
+    &:active { opacity: 0.7; }
+  }
+}
+
+.layout-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+// --- 1. DESKTOP SIDEBAR ---
+.sidebar.desktop-only {
+  width: 280px;
+  flex: 0 0 280px;
+  background: $white;
   border: 1px solid $slate-200;
   border-radius: 12px;
   padding: 1.5rem;
   position: sticky;
-  top: 90px; // Stick when scrolling (below header)
+  top: 90px;
+  z-index: 10;
+
+  @media (max-width: 768px) { display: none; } // Hide completely on mobile
 
   .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
     border-bottom: 1px solid $slate-200;
-
+    padding-bottom: 1rem;
+    
     h3 { font-size: 1.1rem; font-weight: 700; color: $slate-900; margin: 0; }
     .reset-btn {
       background: none; border: none; color: $indigo; 
@@ -52,78 +95,146 @@ $bg-grey: #f8fafc;
       &:hover { text-decoration: underline; }
     }
   }
+}
 
-  .filter-group {
-    margin-bottom: 2rem;
+// --- 2. MOBILE DRAWER SIDEBAR ---
+.sidebar.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%; // Hidden Left
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: $white;
+  z-index: 2000; // Max Priority
+  box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+
+  &.open { left: 0; } // Slide In
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid $slate-200;
     
-    h4 {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #94a3b8;
-      margin-bottom: 1rem;
+    h3 { font-size: 1.25rem; font-weight: 800; margin: 0; }
+    .close-drawer-btn {
+      background: none; border: none; font-size: 1.5rem; 
+      color: $slate-600; cursor: pointer;
     }
+  }
 
-    .checkbox-row {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.75rem;
-      cursor: pointer;
-      
-      input { display: none; } // Hide default checkbox
+  .sidebar-scroll-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+  }
 
-      // Custom Checkbox Box
-      .custom-checkbox {
-        width: 18px;
-        height: 18px;
-        border: 2px solid #cbd5e1;
-        border-radius: 4px;
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s;
-      }
+  .reset-btn-mobile {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #ef4444; 
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
 
-      // Checked State logic
-      input:checked + .custom-checkbox {
-        background: $indigo;
-        border-color: $indigo;
-        &::after {
-          content: '✓';
-          color: white;
-          font-size: 12px;
-          font-weight: bold;
-        }
-      }
-
-      .label-text { color: $slate-600; font-size: 0.95rem; }
-      &:hover .label-text { color: $indigo; }
+  .drawer-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid $slate-200;
+    background: white;
+    
+    .apply-btn {
+      width: 100%;
+      background: $indigo;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
     }
   }
 }
 
-// --- 2. MAIN CONTENT STYLES ---
+// --- SHARED FILTER STYLES ---
+.filter-group {
+  margin-bottom: 2rem;
+  
+  h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+  }
+
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    padding: 4px 0;
+    
+    input { display: none; }
+
+    .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #cbd5e1;
+      border-radius: 4px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    input:checked + .custom-checkbox {
+      background: $indigo;
+      border-color: $indigo;
+      &::after {
+        content: '✓';
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    .label-text { color: $slate-600; font-size: 1rem; }
+  }
+}
+
+// --- MAIN CONTENT & SEARCH ---
 .main-content {
+  flex: 1;
+  min-width: 0;
+
   .page-title {
     font-size: 2rem;
     font-weight: 800;
     color: $slate-900;
     margin-bottom: 1.5rem;
+    @media (max-width: 768px) { font-size: 1.5rem; margin-bottom: 1rem; }
   }
 }
 
-// --- 3. PRO SEARCH BAR (Buddy4Study Style) ---
 .pro-search-bar {
   display: flex;
   align-items: center;
   background: white;
   border: 1px solid $slate-200;
-  border-radius: 8px; // Soft square, not pill
-  padding: 8px;
-  margin-bottom: 2rem;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 1rem; // Reduced margin since button is below now
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-  transition: all 0.3s ease;
 
   &:focus-within {
     border-color: $indigo;
@@ -143,8 +254,7 @@ $bg-grey: #f8fafc;
     padding: 12px 0;
     outline: none;
     color: $slate-900;
-    
-    &::placeholder { color: #94a3b8; }
+    min-width: 0;
   }
 
   .search-action-btn {
@@ -155,29 +265,13 @@ $bg-grey: #f8fafc;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.2s;
-
-    &:hover { background: darken($indigo, 5%); }
+    
+    @media (max-width: 600px) { padding: 10px 16px; font-size: 0.9rem; }
   }
-}
-
-// --- 4. GRID & RESULTS ---
-.results-meta {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: $slate-600;
 }
 
 .scholarships-grid {
   display: grid;
-  // Responsive Grid: 2 columns on tablet, 3 on wide screens
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
-
-  .loading-state, .empty-state {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 4rem;
-    color: $slate-600;
-  }
 }

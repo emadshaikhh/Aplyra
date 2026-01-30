@@ -1,0 +1,122 @@
+[
+  {
+    "id": "int-001",
+    "name": "Frontend Web Developer",
+    "provider": "TechCorp Solutions",
+    "providerImage": "assets/images/providers/google-logo.png",
+    "category": "internship",
+    "deadline": "2026-02-28",
+    "amount": "₹15,000 / month",
+    "course": "Web Development",
+    "state": "Remote",
+    "incomeLimit": "No Limit",
+    "description": "We are looking for a passionate Frontend Developer intern to build responsive UI components using Angular and Tailwind CSS.",
+    "eligibility": [
+      "Knowledge of HTML, CSS, JavaScript",
+      "Basics of Angular or React",
+      "Available for 3 months"
+    ],
+    "documents": ["Resume", "GitHub Portfolio", "Live Project Links"],
+    "officialLink": "https://linkedin.com/jobs"
+  },
+  {
+    "id": "int-002",
+    "name": "UI/UX Design Intern",
+    "provider": "Creative Studio",
+    "providerImage": "assets/images/providers/adobe-logo.png",
+    "category": "internship",
+    "deadline": "2026-03-10",
+    "amount": "₹8,000 - ₹12,000 / month",
+    "course": "Design",
+    "state": "Remote",
+    "incomeLimit": "No Limit",
+    "description": "Assist our design team in creating user flows, wireframes, and high-fidelity prototypes for mobile apps.",
+    "eligibility": [
+      "Proficient in Figma or Adobe XD",
+      "Strong understanding of UI principles",
+      "Portfolio is mandatory"
+    ],
+    "documents": ["Resume", "Behance/Dribbble Portfolio"],
+    "officialLink": "https://internshala.com"
+  },
+  {
+    "id": "int-003",
+    "name": "Full Stack Developer",
+    "provider": "StartUp Hub",
+    "providerImage": "assets/images/providers/microsoft-logo.png",
+    "category": "internship",
+    "deadline": "2026-03-01",
+    "amount": "₹20,000 / month",
+    "course": "Web Development",
+    "state": "Bangalore",
+    "incomeLimit": "No Limit",
+    "description": "Work on the MEAN stack (MongoDB, Express, Angular, Node) to build scalable backend services.",
+    "eligibility": [
+      "Experience with Node.js and MongoDB",
+      "Understanding of REST APIs",
+      "Good problem-solving skills"
+    ],
+    "documents": ["Resume", "GitHub Profile"],
+    "officialLink": "https://wellfound.com"
+  },
+  {
+    "id": "int-004",
+    "name": "Social Media Marketing",
+    "provider": "Buzz Media",
+    "providerImage": "assets/images/providers/meta-logo.png",
+    "category": "internship",
+    "deadline": "2026-02-20",
+    "amount": "₹5,000 + Incentives",
+    "course": "Marketing",
+    "state": "Remote",
+    "incomeLimit": "No Limit",
+    "description": "Manage our social media handles, create engaging content, and drive organic growth.",
+    "eligibility": [
+      "Excellent communication skills",
+      "Knowledge of Instagram Trends/Reels",
+      "Creative mindset"
+    ],
+    "documents": ["Resume", "Writing Samples (Optional)"],
+    "officialLink": "https://internshala.com"
+  },
+  {
+    "id": "int-005",
+    "name": "Data Science Intern",
+    "provider": "FinTech Analytics",
+    "providerImage": "assets/images/providers/ibm-logo.png",
+    "category": "internship",
+    "deadline": "2026-04-15",
+    "amount": "₹25,000 / month",
+    "course": "Data Science",
+    "state": "Hyderabad",
+    "incomeLimit": "No Limit",
+    "description": "Analyze large datasets to extract meaningful insights and build predictive models.",
+    "eligibility": [
+      "Python, Pandas, NumPy",
+      "Basics of Machine Learning",
+      "SQL knowledge is a plus"
+    ],
+    "documents": ["Resume", "Kaggle Profile", "Project Reports"],
+    "officialLink": "https://linkedin.com/jobs"
+  },
+  {
+    "id": "int-006",
+    "name": "Mobile App Developer (Flutter)",
+    "provider": "AppWiz Tech",
+    "providerImage": "assets/images/providers/google-logo.png",
+    "category": "internship",
+    "deadline": "2026-03-20",
+    "amount": "₹10,000 / month",
+    "course": "App Development",
+    "state": "Remote",
+    "incomeLimit": "No Limit",
+    "description": "Build cross-platform mobile applications using Flutter and Dart.",
+    "eligibility": [
+      "Experience with Flutter widgets",
+      "State management (Provider/Bloc)",
+      "Published app is a plus"
+    ],
+    "documents": ["Resume", "Play Store Link (if any)"],
+    "officialLink": "https://internshala.com"
+  }
+]

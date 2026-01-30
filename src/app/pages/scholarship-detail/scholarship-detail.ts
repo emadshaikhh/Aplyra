@@ -25,13 +25,28 @@ export class ScholarshipDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = params['id'];
-      this.loadScholarship(id);
+      if (id) {
+        this.loadScholarship(id);
+      }
     });
   }
 
   loadScholarship(id: string) {
     this.isLoading = true;
-    this.scholarshipService.getScholarshipById(id).subscribe({
+    this.notFound = false;
+
+    // 1. DETERMINE TYPE FROM ID PREFIX
+    let type: 'scholarships' | 'internships' | 'schemes' = 'scholarships';
+    
+    if (id.startsWith('int-')) {
+      type = 'internships';
+    } else if (id.startsWith('schm-')) {
+      type = 'schemes';
+    }
+    // Default is 'scholarships' (for 'sch-' prefix)
+
+    // 2. PASS BOTH ID AND TYPE TO SERVICE
+    this.scholarshipService.getScholarshipById(id, type).subscribe({
       next: (data) => {
         if (data) {
           this.scholarship = data;
@@ -92,7 +107,14 @@ export class ScholarshipDetailComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/scholarships']);
+    // Navigate back intelligently based on the type
+    if (this.scholarship?.category === 'internship') {
+      this.router.navigate(['/internships']);
+    } else if (this.scholarship?.category === 'scheme') {
+      this.router.navigate(['/schemes']);
+    } else {
+      this.router.navigate(['/scholarships']);
+    }
   }
 
   applyNow() {
