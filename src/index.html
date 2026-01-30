@@ -6,6 +6,14 @@
   <title>Aplyra - Discover. Apply. Grow.</title>
   <base href="/">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-05RXBBHPJD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-05RXBBHPJD');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
 
   <meta name="mobile-web-app-capable" content="yes">
@@ -40,11 +48,11 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Aplyra",
-      "url": "https://aplyra.com",
+      "url": "https://aplyra.app", 
       "description": "Find verified scholarships, internships and government schemes across India.",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://aplyra.com/scholarships?search={search_term_string}",
+        "target": "https://aplyra.app/scholarships?search={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
